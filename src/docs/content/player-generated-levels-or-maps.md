@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 
-## Player generated levels or maps
+## Player-generated levels or maps
 
 After a player has created a custom map or level in your game they can share it with other players or save it locally to their device by storing it in a content.
 
@@ -79,7 +79,7 @@ var key = "awesome_map_by_sam"
 var custom_map = get_node("custom_map")
 var content = yield(GotmContent.create(custom_map, key), "completed")
 var shared_content = yield(GotmContent.get_by_key(key), "completed")
-var shared_map = yield(GotmContent.get_node(shared_content.id), "completed")
+var shared_map = yield(GotmContent.get_node(shared_content), "completed")
 ```
 
 ### Group forest-themed maps in the same directory
@@ -91,7 +91,7 @@ var key = "forest_maps/my_map"
 var custom_map = get_node("custom_map")
 var content = yield(GotmContent.create(custom_map, key), "completed")
 var forest_maps = yield(GotmContent.list(GotmQuery.new().filter("directory", "forest_maps")), "completed")
-var forest_map = yield(GotmContent.get_node(related_contents[0].id), "completed")
+var forest_map = yield(GotmContent.get_node(related_contents[0]), "completed")
 ```
 
 ### Browse maps by a player
@@ -101,7 +101,7 @@ When a player wants to browse custom maps made by a particular player, they can 
 ```gdscript
 var my_user_id = Gotm.user.id
 var my_maps = yield(GotmContent.list(GotmQuery.new().filter("user_id", my_user_id)), "completed")
-var my_map = yield(GotmContent.get_node(my_maps[0].id), "completed")
+var my_map = yield(GotmContent.get_node(my_maps[0]), "completed")
 ```
 
 ### Preview a heavy map without loading it
@@ -127,23 +127,23 @@ query.filter("properties/difficulty", "hard")
 query.filter("properties/theme", "forest")
 query.filter_min("properties/tree_count", 1000)
 var first_20_maps = yield(GotmContent.list(query), "completed")
-var second_20_maps = yield(GotmContent.list(query, first_20_maps.back().id), "completed")
+var second_20_maps = yield(GotmContent.list(query, first_20_maps.back()), "completed")
 ```
 
 ### Upvote fun maps
 
-A player can see if they have played a map upvote maps they like and downvote maps they don't like.
-
-If a player knows what kind of maps they like, they can explore new maps by using content metadata to filter and order maps. In this case the player wants to play a hard forest map with a lot of trees.
+After playing a map, a player can share their opinion of the map with other players and the map-creator by upvoting or downvoting it. This allows players to easier find fun maps with many upvotes and avoid less fun maps with many downvotes.
 
 ```gdscript
-var query = GotmQuery.new()
-query.filter("properties/difficulty", "hard")
-query.filter("properties/theme", "forest")
-query.filter_min("properties/tree_count", 1000)
-var first_20_maps = yield(GotmContent.list(query), "completed")
-var second_20_maps = yield(GotmContent.list(query, first_20_maps.back().id), "completed")
+yield(GotmMark.create(content, "upvote"))
+yield(GotmMark.create(content, "downvote"))
+var total_upvote_count = yield(GotmMark.get_count(content, "upvote"), "completed")
+var total_downvote_count = yield(GotmMark.get_count(content, "downvote"), "completed")
+var is_upvoted_by_me = yield(GotmMark.exists(content, "upvote"), "completed")
+var is_downvoted_by_me = yield(GotmMark.exists(content, "downvote"), "completed")
 ```
+
+### Browse my favorite maps
 
 ### Browse top voted maps
 
