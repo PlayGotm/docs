@@ -121,6 +121,23 @@ yield(GotmContent.update_by_key(merchant_inventory_key, merchant_inventory), "co
 
 A player can enchant their sword with anti-fire essences to increase the sword's fire resistance.
 
+```gdscript
+# Get our equipped sword and our inventory
+var auth = yield(GotmAuth.fetch(), "completed")
+var my_sword_key = auth.user_id + "/equipped_sword"
+var my_inventory_key = auth.user_id + "/inventory"
+var my_sword = yield(GotmContent.get_variant_by_key(my_sword_key), "completed")
+var my_inventory = yield(GotmContent.get_variant_by_key(my_inventory_key), "completed")
+# Enchant our sword
+for item in my_inventory.duplicate():
+    if item == "anti_fire_essence":
+        my_sword.fire_resistance += 100
+        my_inventory.erase(item)
+# Save our equipped sword and inventory
+yield(GotmContent.update_by_key(my_sword_key, my_sword), "completed")
+yield(GotmContent.update_by_key(my_inventory_key, my_inventory), "completed")
+```
+
 ## Group forest-themed items in the same directory
 
 When multiple custom items share the same forest theme or are variations of the same existing item, a player can put their custom item in a directory that is shared with other items.
