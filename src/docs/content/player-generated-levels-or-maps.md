@@ -52,10 +52,10 @@ var content = yield(GotmContent.create_local(custom_map))
 
 ### Load map
 
-When a player wants to play an existing map that is stored in a content, they can load it by using the content's unique identifier that was automatically generated when the content was created.
+When a player wants to play an existing map that is stored in a content, they can load it from the content.
 
 ```gdscript
-var instanced_custom_map = yield(GotmContent.get_node(content.id), "completed")
+var instanced_custom_map = yield(GotmContent.get_node(content), "completed")
 add_child(instanced_custom_map)
 ```
 
@@ -64,8 +64,10 @@ add_child(instanced_custom_map)
 If a player has a list of favorite custom maps, or maps that they want to play later, they can save a list of lightweight content identifiers instead of the original content data. The content identifiers can be used to retrieve the original content data.
 
 ```gdscript
+# Save our favorite list
 var favorites = [content.id]
 var favorites_content = yield(GotmContent.create(favorites), "completed")
+# Load our favorite list
 var loaded_favorites = yield(GotmContent.get_variant(favorites_content.id), "completed")
 var favorite_map = yield(GotmContent.get_node(loaded_favorites[0]), "completed")
 ```
@@ -75,9 +77,11 @@ var favorite_map = yield(GotmContent.get_node(loaded_favorites[0]), "completed")
 A player can easily send their custom map to their friends by choosing a memorable key for their map instead of using the content's automatically generated identifier.
 
 ```gdscript
+# Save our map with a key
 var key = "awesome_map_by_sam"
 var custom_map = get_node("custom_map")
 var content = yield(GotmContent.create(custom_map, key), "completed")
+# Load our map with the same key
 var shared_content = yield(GotmContent.get_by_key(key), "completed")
 var shared_map = yield(GotmContent.get_node(shared_content), "completed")
 ```
@@ -87,10 +91,14 @@ var shared_map = yield(GotmContent.get_node(shared_content), "completed")
 When multiple custom maps share the same forest theme or are variations of the same existing map, a player can put their custom map in a directory that is shared with other maps.
 
 ```gdscript
+# Save our map with a file-path-like key
 var key = "forest_maps/my_map"
 var custom_map = get_node("custom_map")
 var content = yield(GotmContent.create(custom_map, key), "completed")
-var forest_maps = yield(GotmContent.list(GotmQuery.new().filter("directory", "forest_maps")), "completed")
+# Load a map from the directory
+var query = GotmQuery.new()
+query.filter("directory", "forest_maps")
+var forest_maps = yield(GotmContent.list(query), "completed")
 var forest_map = yield(GotmContent.get_node(related_contents[0]), "completed")
 ```
 
@@ -100,7 +108,9 @@ When a player wants to browse custom maps made by a particular player, they can 
 
 ```gdscript
 var my_user_id = Gotm.user.id
-var my_maps = yield(GotmContent.list(GotmQuery.new().filter("user_id", my_user_id)), "completed")
+var query = GotmQuery.new()
+query.filter("user_id", my_useR_id)
+var my_maps = yield(GotmContent.list(query), "completed")
 var my_map = yield(GotmContent.get_node(my_maps[0]), "completed")
 ```
 
@@ -109,9 +119,11 @@ var my_map = yield(GotmContent.get_node(my_maps[0]), "completed")
 A custom map can be big and expensive to download or load from local storage. Before a player decides to play a heavy map, they can read the content's light metadata to learn more about a map without loading the map.
 
 ```gdscript
+# Save our map with custom metadata
 var custom_map = get_node("custom_map")
 var metadata_properties = {"difficulty": "hard", "theme": "forest", "tree_count": 20}
 var content = yield(GotmContent.create(custom_map, "", metadata_properties), "completed")
+# Read metadata
 var difficulty = content.properties.difficulty
 var theme = content.properties.theme
 var tree_count = content.properties.tree_count
@@ -132,25 +144,56 @@ var second_20_maps = yield(GotmContent.list(query, first_20_maps.back()), "compl
 
 ### Upvote fun maps
 
-After playing a map, a player can share their opinion of the map with other players and the map-creator by upvoting or downvoting it. This allows players to easier find fun maps with many upvotes and avoid less fun maps with many downvotes.
+After playing a map, a player can share their opinion of the map with other players and the map-creator by upvoting or downvoting it. This allows players to easier find popular maps with many upvotes and avoid unpopular maps with many downvotes.
 
 ```gdscript
-yield(GotmMark.create(content, "upvote"))
-yield(GotmMark.create(content, "downvote"))
+# Create votes
+var upvote_mark = yield(GotmMark.create(content, "upvote"))
+var downvote_mark = yield(GotmMark.create(content, "downvote"))
+# Count votes by all users
 var total_upvote_count = yield(GotmMark.get_count(content, "upvote"), "completed")
 var total_downvote_count = yield(GotmMark.get_count(content, "downvote"), "completed")
-var is_upvoted_by_me = yield(GotmMark.exists(content, "upvote"), "completed")
-var is_downvoted_by_me = yield(GotmMark.exists(content, "downvote"), "completed")
+# Get my votes
+var my_upvotes = yield(GotmMark.list_by_target(content, "upvote"), "completed")
+var my_downvotes = yield(GotmMark.list_by_target(content, "downvote"), "completed")
 ```
 
-### Browse my favorite maps
+### Browse a player's upvoted forest maps
 
-### Browse top voted maps
+A player can upvote a map as a way to easily find the map when they want to play it again later. Some players are also interested in what maps their friends have upvoted.
+
+```gdscript
+var my_user_id = Gotm.user.id
+var query = GotmQuery.new()
+query.filter("upvote_user_id", my_user_id)
+query.filter("properties/theme", "forest")
+var my_upvoted_maps = yield(GotmContent.list(query), "completed")
+```
+
+### Browse top voted hard maps
+
+Some players are only interested in the most popular maps and would like to browse maps with many upvotes and few downvotes.
+
+```gdscript
+var query = GotmQuery.new()
+query.filter("properties/difficulty", "hard")
+query.sort("score")
+var first_top_20_maps = yield(GotmContent.list(query), "completed")
+var second_top_20_maps = yield(GotmContent.list(query, first_top_20_maps.back()), "completed")
+```
 
 ### Search memorable maps by name
 
-Who
-What
-When
-Where
-Why
+When a player searches for a particular map, they may only remember a part of the maps' name.
+
+```gdscript
+# Save our map with a searchable name
+var custom_map = get_node("custom_map")
+var name = "The best map ever!"
+var content = yield(GotmContent.create(custom_map, "", {}, name), "completed")
+# Search maps using a part of the name
+var query = GotmQuery.new()
+query.filter("name_part", "best map")
+var first_20_maps = yield(GotmContent.list(query), "completed")
+var second_20_maps = yield(GotmContent.list(query, first_20_maps.back()), "completed")
+```
