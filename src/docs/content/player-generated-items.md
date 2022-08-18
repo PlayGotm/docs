@@ -48,9 +48,10 @@ A player can inspect a particular player's inventory by using a memorable key fo
 
 ```gdscript
 # Save an inventory with a unique key based on the player's user id
-var key = Gotm.user.id + "/inventory"
+var auth = yield(GotmAuth.fetch(), "completed")
+var key = auth.user_id + "/inventory"
 var inventory = []
-inventory.append(content.id)
+inventory.append("sword")
 var content = yield(GotmContent.create(custom_item, key), "completed")
 # Load the inventory with the same key
 var inspected_inventory = yield(GotmContent.get_variant_by_key(key), "completed")
@@ -67,7 +68,8 @@ recipe_data.required_ingredients = ["wood"]
 recipe_data.optional_ingredients = ["anti_fire_essence"]
 var recipe_key = "recipes/wooden_sword"
 var inventory_data = ["wood"]
-var inventory_key = Gotm.user.id + "/inventory"
+var auth = yield(GotmAuth.fetch(), "completed")
+var inventory_key = auth.user_id + "/inventory"
 yield(GotmContent.create(recipe_data, recipe_key), "completed")
 yield(GotmContent.create(inventory_data, inventory_key), "completed")
 # Later on we want to craft a sword.
@@ -94,15 +96,16 @@ yield(GotmContent.update_by_key(inventory_key, my_inventory), "completed")
 
 ## Trade a sword for coins
 
-A player can trade their sword for new items or coins with other players or non-player characters. In this case a player trades their sword for a coin with the town merchant non-player character.
+A player can trade their sword for new items or coins with other players or non-player characters. In this case a player trades their sword for a coin with the town merchant.
 
 ```gdscript
 # Check if we have a sword and they have a coin
-var my_inventory_key = Gotm.user.id + "/inventory"
+var auth = yield(GotmAuth.fetch(), "completed")
+var my_inventory_key = auth.user_id + "/inventory"
 var merchant_inventory_key = "town_merchant_bot/inventory"
 var my_inventory = yield(GotmContent.get_variant_by_key(my_inventory_key), "completed")
 var merchant_inventory = yield(GotmContent.get_variant_by_key(merchant_inventory_key), "completed")
-if !my_inventory.has("sword") || !merchant_inventory("coin"):
+if !my_inventory.has("sword") || !merchant_inventory.has("coin"):
     return
 # Trade the items
 my_inventory.erase("sword")
@@ -139,9 +142,10 @@ var forest_item = yield(GotmContent.get_node(related_contents[0]), "completed")
 When a player wants to browse custom items made by a particular player, they can use that player's unique identifier.
 
 ```gdscript
-var my_user_id = Gotm.user.id
+var auth = yield(GotmAuth.fetch(), "completed")
+var my_user_id = auth.user_id
 var query = GotmQuery.new()
-query.filter("user_id", my_useR_id)
+query.filter("user_id", my_user_id)
 var my_items = yield(GotmContent.list(query), "completed")
 var my_item = yield(GotmContent.get_node(my_items[0]), "completed")
 ```
@@ -195,7 +199,8 @@ var my_downvotes = yield(GotmMark.list_by_target(content, "downvote"), "complete
 A player can upvote a item as a way to easily find the item when they want to play it again later. Some players are also interested in what items their friends have upvoted.
 
 ```gdscript
-var my_user_id = Gotm.user.id
+var auth = yield(GotmAuth.fetch(), "completed")
+var my_user_id = auth.user_id
 var query = GotmQuery.new()
 query.filter("upvote_user_id", my_user_id)
 query.filter("properties/theme", "forest")

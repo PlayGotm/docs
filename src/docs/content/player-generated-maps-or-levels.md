@@ -82,16 +82,17 @@ var forest_map = yield(GotmContent.get_node(related_contents[0]), "completed")
 When a player wants to browse custom maps made by a particular player, they can use that player's unique identifier.
 
 ```gdscript
-var my_user_id = Gotm.user.id
+var auth = yield(GotmAuth.fetch(), "completed")
+var my_user_id = auth.user_id
 var query = GotmQuery.new()
-query.filter("user_id", my_useR_id)
+query.filter("user_id", my_user_id)
 var my_maps = yield(GotmContent.list(query), "completed")
 var my_map = yield(GotmContent.get_node(my_maps[0]), "completed")
 ```
 
 ## Preview a heavy map without loading it
 
-A custom map can be big and expensive to download or load from local storage. Before a player decides to play a heavy map, they can read the content's light metadata to learn more about a map without loading the map.
+A custom map can be big and expensive to download or load from local storage. Before a player decides to play a heavy map, they can read the content's lightweight metadata to learn more about a map without loading the map.
 
 ```gdscript
 # Save our map with custom metadata
@@ -142,7 +143,8 @@ var my_downvotes = yield(GotmMark.list_by_target(content, "downvote"), "complete
 A player can upvote a map as a way to easily find the map when they want to play it again later. Some players are also interested in what maps their friends have upvoted.
 
 ```gdscript
-var my_user_id = Gotm.user.id
+var auth = yield(GotmAuth.fetch(), "completed")
+var my_user_id = auth.user_id
 var query = GotmQuery.new()
 query.filter("upvote_user_id", my_user_id)
 query.filter("properties/theme", "forest")
