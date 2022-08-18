@@ -22,57 +22,33 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 
-## Player-generated levels or maps
+# Player-generated Godot maps or levels
 
-After a player has created a custom map or level in your game they can share it with other players or save it locally to their device by storing it in a content.
+Enabling players to create their own custom maps or levels is an effective way to foster a vibrant and creative community in a game. Dota 2 and Counter-Strike are today very popular games that started off as custom maps within another game.
 
-In this example a player has already created their custom map, which is just a Godot node.
+Custom maps can also give players the creative freedom to create their own gameplay mechanics and subgenres within a game. For example, in "surf maps" in Counter-Strike, players focus on surfing on walls through an obstacle course instead of shooting people. Surf maps have even spawned subgenres within itself, with some maps focusing on speedsurfing and others on tricksurfing. The surf mechanic is originally an exploitation of a physics bug.
 
-### Share map with other players
+Before a player can create a custom map, the game must feature a map editor. Luckily, making a Godot map editor is relatively easy thanks to Godot's node structure.
 
-A player has finished creating their custom map and is ready to make it accessible to other players by storing it in a content.
+After a player has created a custom map or level in the game they can share it with other players or save it locally to their device by storing it in a [Gotm content](../content.md).
 
-```gdscript
-var custom_map = get_node("custom_map")
-var content = yield(GotmContent.create(custom_map))
-```
+This example shows how to make custom Godot maps savable and sharable. In this example a player has already created their custom map, which is just a Godot node.
 
-<gdscript>
+<include subject="map">
 
-### Save map locally
+[](/src/docs/content/utility/share-subject-with-other-players.md)
+[](/src/docs/content/utility/save-subject-locally.md)
+[](/src/docs/content/utility/load-subject.md)
 
-If a player is not finished with their custom map, or does not want to or can't share it with other players, they can save it locally to their own device.
+<include container="favorites" scenario="If a player has a list of favorite custom maps, or maps that they want to play later">
 
-```gdscript
-var custom_map = get_node("custom_map")
-var content = yield(GotmContent.create_local(custom_map))
-```
+[](/src/docs/content/utility/add-subject-to-container.md)
 
-</gdscript>
+</include>
 
-### Load map
+</include>
 
-When a player wants to play an existing map that is stored in a content, they can load it from the content.
-
-```gdscript
-var instanced_custom_map = yield(GotmContent.get_node(content), "completed")
-add_child(instanced_custom_map)
-```
-
-### Save maps in a favorite list
-
-If a player has a list of favorite custom maps, or maps that they want to play later, they can save a list of lightweight content identifiers instead of the original content data. The content identifiers can be used to retrieve the original content data.
-
-```gdscript
-# Save our favorite list
-var favorites = [content.id]
-var favorites_content = yield(GotmContent.create(favorites), "completed")
-# Load our favorite list
-var loaded_favorites = yield(GotmContent.get_variant(favorites_content.id), "completed")
-var favorite_map = yield(GotmContent.get_node(loaded_favorites[0]), "completed")
-```
-
-### Share maps with friends using memorable custom keys
+## Share maps with friends using memorable custom keys
 
 A player can easily send their custom map to their friends by choosing a memorable key for their map instead of using the content's automatically generated identifier.
 
@@ -82,11 +58,10 @@ var key = "awesome_map_by_sam"
 var custom_map = get_node("custom_map")
 var content = yield(GotmContent.create(custom_map, key), "completed")
 # Load our map with the same key
-var shared_content = yield(GotmContent.get_by_key(key), "completed")
-var shared_map = yield(GotmContent.get_node(shared_content), "completed")
+var shared_map = yield(GotmContent.get_node_by_key(key), "completed")
 ```
 
-### Group forest-themed maps in the same directory
+## Group forest-themed maps in the same directory
 
 When multiple custom maps share the same forest theme or are variations of the same existing map, a player can put their custom map in a directory that is shared with other maps.
 
@@ -102,7 +77,7 @@ var forest_maps = yield(GotmContent.list(query), "completed")
 var forest_map = yield(GotmContent.get_node(related_contents[0]), "completed")
 ```
 
-### Browse maps by a player
+## Browse maps by a player
 
 When a player wants to browse custom maps made by a particular player, they can use that player's unique identifier.
 
@@ -114,22 +89,26 @@ var my_maps = yield(GotmContent.list(query), "completed")
 var my_map = yield(GotmContent.get_node(my_maps[0]), "completed")
 ```
 
-### Preview a heavy map without loading it
+## Preview a heavy map without loading it
 
 A custom map can be big and expensive to download or load from local storage. Before a player decides to play a heavy map, they can read the content's light metadata to learn more about a map without loading the map.
 
 ```gdscript
 # Save our map with custom metadata
 var custom_map = get_node("custom_map")
-var metadata_properties = {"difficulty": "hard", "theme": "forest", "tree_count": 20}
-var content = yield(GotmContent.create(custom_map, "", metadata_properties), "completed")
+var meta = {}
+meta.difficulty = "hard"
+meta.theme = "forest"
+meta.tree_count = 20
+var content = yield(GotmContent.create(custom_map, "", meta), "completed")
 # Read metadata
-var difficulty = content.properties.difficulty
-var theme = content.properties.theme
-var tree_count = content.properties.tree_count
+var loaded_meta = content.properties
+var difficulty = loaded_meta.difficulty
+var theme = loaded_meta.theme
+var tree_count = loaded_meta.tree_count
 ```
 
-### Browse forest maps with many trees
+## Browse forest maps with many trees
 
 If a player knows what kind of maps they like, they can explore new maps by using content metadata to filter and order maps. In this case the player wants to play a hard forest map with a lot of trees.
 
@@ -142,7 +121,7 @@ var first_20_maps = yield(GotmContent.list(query), "completed")
 var second_20_maps = yield(GotmContent.list(query, first_20_maps.back()), "completed")
 ```
 
-### Upvote fun maps
+## Upvote fun maps
 
 After playing a map, a player can share their opinion of the map with other players and the map-creator by upvoting or downvoting it. This allows players to easier find popular maps with many upvotes and avoid unpopular maps with many downvotes.
 
@@ -158,7 +137,7 @@ var my_upvotes = yield(GotmMark.list_by_target(content, "upvote"), "completed")
 var my_downvotes = yield(GotmMark.list_by_target(content, "downvote"), "completed")
 ```
 
-### Browse a player's upvoted forest maps
+## Browse a player's upvoted forest maps
 
 A player can upvote a map as a way to easily find the map when they want to play it again later. Some players are also interested in what maps their friends have upvoted.
 
@@ -170,7 +149,7 @@ query.filter("properties/theme", "forest")
 var my_upvoted_maps = yield(GotmContent.list(query), "completed")
 ```
 
-### Browse top voted hard maps
+## Browse top voted hard maps
 
 Some players are only interested in the most popular maps and would like to browse maps with many upvotes and few downvotes.
 
@@ -182,7 +161,7 @@ var first_top_20_maps = yield(GotmContent.list(query), "completed")
 var second_top_20_maps = yield(GotmContent.list(query, first_top_20_maps.back()), "completed")
 ```
 
-### Search memorable maps by name
+## Search memorable maps by name
 
 When a player searches for a particular map, they may only remember a part of the maps' name.
 

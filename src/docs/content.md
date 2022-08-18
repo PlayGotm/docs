@@ -32,24 +32,35 @@ Players use content to share their progress or creations in a game with other pl
 
 <developer>
 
-<chapter src="content/quests" />
-<chapter src="content/levels-or-maps" />
-<chapter src="content/characters-and-enemies" />
-<chapter src="content/items" />
-<chapter src="content/events-and-seasons" />
-<chapter src="content/downloadable-content-or-expansion-packs" />
-<chapter src="content/game-configuration-and-balancing" />
-<chapter src="content/drop-tables" />
-<chapter src="content/dialogues" />
-<chapter src="content/inventory" />
-<chapter src="content/character-progression" />
-<chapter src="content/game-saves" />
-<chapter src="content/player-profiles" />
-<chapter src="content/mods" />
-<chapter src="content/player-generated-levels-or-maps" />
-<chapter src="content/player-generated-characters" />
-<chapter src="content/player-generated-items" />
-<chapter src="content/player-messages-like-dark-souls" />
-<chapter src="content/turn-based-multiplayer-games" />
+<chapter>
+
+[](/src/docs/content/quests.md)
+[](/src/docs/content/maps-or-levels.md)
+[](/src/docs/content/characters-and-enemies.md)
+[](/src/docs/content/items.md)
+[](/src/docs/content/events-and-seasons.md)
+[](/src/docs/content/game-configuration-and-balancing.md)
+[](/src/docs/content/drop-tables.md)
+[](/src/docs/content/dialogues.md)
+[](/src/docs/content/inventory.md)
+[](/src/docs/content/character-progression.md)
+[](/src/docs/content/downloadable-content-or-expansion-packs.md)
+[](/src/docs/content/game-saves.md)
+
+</chapter>
+
+## Player-generated content
+
+<chapter>
+
+[](/src/docs/content/player-profiles.md)
+[](/src/docs/content/mods.md)
+[](/src/docs/content/player-generated-maps-or-levels.md)
+[](/src/docs/content/player-generated-characters.md)
+[](/src/docs/content/player-generated-items.md)
+[](/src/docs/content/player-messages-like-dark-souls.md)
+[](/src/docs/content/turn-based-multiplayer-games.md)
+
+</chapter>
 
 </developer>
