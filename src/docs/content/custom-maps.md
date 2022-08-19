@@ -1,17 +1,12 @@
-# Player-generated Godot maps or levels
+# Custom Godot maps
 
 Enabling players to create their own custom maps or levels is an effective way to foster a vibrant and creative community in a game. Dota 2 and Counter-Strike are today very popular games that started off as custom maps within another game.
 
 Custom maps can also give players the creative freedom to create their own gameplay mechanics and subgenres within a game. For example, in "surf maps" in Counter-Strike, players focus on surfing on walls through an obstacle course instead of shooting people. Surf maps have even spawned subgenres within itself, with some maps focusing on speedsurfing and others on tricksurfing. The surf mechanic is originally an exploitation of a physics bug.
 
-Before a player can create a custom map, the game must feature a map editor. Luckily, making a Godot map editor is relatively easy thanks to Godot's node structure.
-
-After a player has created a custom map or level in the game they can share it with other players or save it locally to their device by storing it in a [Gotm content](../content.md).
-
-This example shows how to make custom Godot maps savable and sharable. In this example a player has already created their custom map, which is just a Godot node.
-
 <include subject="map">
 
+[](/src/docs/content/utility/editor-intro.md)
 [](/src/docs/content/utility/share-subject-with-other-players.md)
 [](/src/docs/content/utility/save-subject-locally.md)
 [](/src/docs/content/utility/load-subject.md)

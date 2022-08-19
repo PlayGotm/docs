@@ -1,118 +1,28 @@
-# Player-generated items
+# Custom Godot items
 
-After a player has created a custom item in your game they can share it with other players or save it locally to their device by storing it in a content.
+Creative players love to customize whatever they can in a game because it lets them express themselves and influence their gaming experience in their own way. When a player has created something impressive or funny, they can also share it with friends and other players.
 
-In this example a player has already created their custom item, which is just a Godot node.
+Lego Racers and "Gary Gadget: Building Cars" are two games where players can construct cars any way they like using parts they have collected in the game world. Without the car customization mechanic, these games would probably not have become as popular as they were.
 
-<include subject="item">
+<include subject="car">
+
+[](/src/docs/content/utility/editor-intro.md)
+
+</include subject="item">
+
+<include subject="car">
 
 [](/src/docs/content/utility/share-subject-with-other-players.md)
 [](/src/docs/content/utility/save-subject-locally.md)
 [](/src/docs/content/utility/load-subject.md)
 
-<include container="inventory" scenario="When a player has acquired an item">
+<include container="garage" scenario="When a player wants to save their car to their garage">
 
 [](/src/docs/content/utility/add-subject-to-container.md)
 
 </include>
 
 </include>
-
-## Inspect player inventory
-
-A player can inspect a particular player's inventory by using a memorable key for their inventory instead of using the content's automatically generated identifier.
-
-```gdscript
-# Save an inventory with a unique key based on the player's user id
-var auth = yield(GotmAuth.fetch(), "completed")
-var key = auth.user_id + "/inventory"
-var inventory = []
-inventory.append("sword")
-var content = yield(GotmContent.create(custom_item, key), "completed")
-# Load the inventory with the same key
-var inspected_inventory = yield(GotmContent.get_variant_by_key(key), "completed")
-```
-
-## Craft a unique sword
-
-A player can craft a unique sword with different characteristics depending on the crafting ingredients. In this case a player crafts a wooden sword with an anti-fire essence.
-
-```gdscript
-# Create the recipe and inventory beforehand
-var recipe_data = {}
-recipe_data.required_ingredients = ["wood"]
-recipe_data.optional_ingredients = ["anti_fire_essence"]
-var recipe_key = "recipes/wooden_sword"
-var inventory_data = ["wood"]
-var auth = yield(GotmAuth.fetch(), "completed")
-var inventory_key = auth.user_id + "/inventory"
-yield(GotmContent.create(recipe_data, recipe_key), "completed")
-yield(GotmContent.create(inventory_data, inventory_key), "completed")
-# Later on we want to craft a sword.
-# Check if we have the required ingredients.
-var sword_recipe = yield(GotmContent.get_variant_by_key(recipe_key), "completed")
-var my_inventory = yield(GotmContent.get_variant_by_key(inventory_key), "completed")
-for required_ingredient in sword_recipe.required_ingredients:
-    if !my_inventory.has(required_ingredient):
-        return
-# Check if we can optionally add an anti-fire essence.
-if !sword_recipe.optional_ingredients.has("anti_fire_essence"):
-    return
-# Create the sword
-var sword = {}
-sword.recipe = "wooden_sword"
-sword.fire_resistance = 0
-for item in my_inventory:
-    if item == "anti_fire_essence":
-        sword.fire_resistance += 100
-# Add the sword to our inventory
-my_inventory.append(sword)
-yield(GotmContent.update_by_key(inventory_key, my_inventory), "completed")
-```
-
-## Trade a sword for coins
-
-A player can trade their sword for new items or coins with other players or non-player characters. In this case a player trades their sword for a coin with the town merchant.
-
-```gdscript
-# Check if we have a sword and they have a coin
-var auth = yield(GotmAuth.fetch(), "completed")
-var my_inventory_key = auth.user_id + "/inventory"
-var merchant_inventory_key = "town_merchant_bot/inventory"
-var my_inventory = yield(GotmContent.get_variant_by_key(my_inventory_key), "completed")
-var merchant_inventory = yield(GotmContent.get_variant_by_key(merchant_inventory_key), "completed")
-if !my_inventory.has("sword") || !merchant_inventory.has("coin"):
-    return
-# Trade the items
-my_inventory.erase("sword")
-merchant_inventory.append("sword")
-merchant_inventory.erase("coin")
-my_inventory.append("coin")
-# Save the inventories
-yield(GotmContent.update_by_key(my_inventory_key, my_inventory), "completed")
-yield(GotmContent.update_by_key(merchant_inventory_key, merchant_inventory), "completed")
-```
-
-## Enchant a sword
-
-A player can enchant their sword with anti-fire essences to increase the sword's fire resistance.
-
-```gdscript
-# Get our equipped sword and our inventory
-var auth = yield(GotmAuth.fetch(), "completed")
-var my_sword_key = auth.user_id + "/equipped_sword"
-var my_inventory_key = auth.user_id + "/inventory"
-var my_sword = yield(GotmContent.get_variant_by_key(my_sword_key), "completed")
-var my_inventory = yield(GotmContent.get_variant_by_key(my_inventory_key), "completed")
-# Enchant our sword
-for item in my_inventory.duplicate():
-    if item == "anti_fire_essence":
-        my_sword.fire_resistance += 100
-        my_inventory.erase(item)
-# Save our equipped sword and inventory
-yield(GotmContent.update_by_key(my_sword_key, my_sword), "completed")
-yield(GotmContent.update_by_key(my_inventory_key, my_inventory), "completed")
-```
 
 ## Group forest-themed items in the same directory
 

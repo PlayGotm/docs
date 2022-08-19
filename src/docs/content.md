@@ -31,9 +31,9 @@ Players use content to share their progress or creations in a game with other pl
 
 [](/src/docs/content/player-profiles.md)
 [](/src/docs/content/mods.md)
-[](/src/docs/content/player-generated-maps-or-levels.md)
-[](/src/docs/content/player-generated-characters.md)
-[](/src/docs/content/player-generated-items.md)
+[](/src/docs/content/custom-maps.md)
+[](/src/docs/content/custom-characters.md)
+[](/src/docs/content/custom-items.md)
 [](/src/docs/content/player-messages-like-dark-souls.md)
 [](/src/docs/content/turn-based-multiplayer-games.md)
 
