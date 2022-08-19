@@ -1,3 +1,5 @@
+# Trading in Godot
+
 ## Trade a sword for coins
 
 A player can trade their sword for new items or coins with other players or non-player characters. In this case a player trades their sword for a coin with the town merchant.
