@@ -83,48 +83,14 @@ for receipt_content in receipt_contents:
     coin_stack.name = "coins"
     coin_stack.amount = receipt.price
     seller_inventory.append(coin_stack)
-    yield(GotmContent.delete(receipt_content.parent), "completed")
+    yield(GotmContent.delete(receipt_content.parents[0]), "completed")
 # Save the seller's inventory
 var seller_inventory_key = auth.user_id + "/inventory"
 yield(GotmContent.update_by_key(seller_inventory_key, seller_inventory), "completed")
 ```
 
-## Find items for sale by a player
+<include medium="marketplace">
 
-When a player wants to find items that are being sold by a particular player, they can use that player's unique identifier.
+[](/src/docs/content/utility/marketplace-auction-house-common.md)
 
-```gdscript
-var auth = yield(GotmAuth.fetch(), "completed")
-var my_user_id = auth.user_id
-var query = GotmQuery.new()
-query.filter("user_id", my_user_id)
-var game_sale_contents = yield(GotmContent.list(query), "completed")
-# Is {"name": "gem", "price": 50}
-var gem_sale = game_sale_contents[0].properties
-```
-
-## Search items for sale by name
-
-When a player wants to look up a recipe, they can easily find it by searching for its name. In this example the player searches for "ge", which matches "Gem".
-
-```gdscript
-var query = Query.new()
-query.filter("name_part", "ge")
-var game_sale_contents = yield(GotmContent.list(query), "completed")
-# Is {"name": "gem", "price": 50}
-var gem_sale = game_sale_contents[0].properties
-```
-
-## Exclude expensive gems
-
-When a player is searching for gems on the marketplace, they can exclude expensive gems from their search. In this case the player is only interesting in gems that cost less than 100 coins.
-
-```gdscript
-var query = GotmQuery.new()
-query.filter("properties/name", "gem")
-query.filter_max("properties/price", 100)
-var gem_sale_contents = yield(GotmContent.list(query), "completed")
-var gem_sale_content = gem_sale_contents[0]
-# Is {"name": "gem", "price": 50}
-var gem_sale = gem_sale_content.properties
-```
+</include>
