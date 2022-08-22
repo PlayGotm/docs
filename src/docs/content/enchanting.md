@@ -1,14 +1,14 @@
 # Enchanting in Godot
 
-Crafting is a popular game mechanic where a player can craft a new item from other ingredient items according to a recipe. A player can unlock new capabilities by crafting items, which adds depth and progression to the game.
+Enchanting lets a player improve an existing item by applying other ingredient items to it according to a recipe. For example, a player can make their ordinary sword inflict extra fire damage on enemies by enchanting it with a fire enchantment. Enchanting is an effective way to give a player more choices and control, while also creating an opportunity for interesting or unexpected gameplay.
 
-Minecraft is a popular game where a player first crafts wooden tools, which lets the player collect ingredients for stone tools, which then lets the player collect ingredients for iron tools, and so on.
+Minecraft is a popular game where a player can enchant their tools, armor and weapons through a complicated enchanting system.
 
 This example shows how to do crafting in Godot by storing the recipes and the player's [inventory](./inventory.md) in [Gotm contents](/src/docs/content.md).
 
 ## Enchant a sword with fire
 
-A player can enchant their sword with fire to make the sword inflict extra fire damage to enemies.
+A player can enchant their sword with fire to make the sword inflict extra fire damage on enemies.
 
 ```gdscript
 # Define the recipe and inventory
