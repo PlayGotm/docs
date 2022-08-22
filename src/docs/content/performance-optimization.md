@@ -1,3 +1,5 @@
+# Performance optimization
+
 Avoid using many contents. For example, instead of storing inventory and stats in two different contents, store them in the same content.
 
 Avoid saving content with every change. There is a limit to how often you can save content.
