@@ -26,7 +26,7 @@ var gem_sale = gem_sale_contents[0].properties
 
 ## Exclude expensive gems
 
-When a player is searching for gems in the %medium%, they can exclude expensive gems from their search. In this case the player is only interesting in gems that cost less than 100 coins.
+When a player is searching for gems in the %medium%, they can exclude expensive gems from their search. In this case the player is only interested in gems that cost less than 100 coins.
 
 ```gdscript
 var query = GotmQuery.new()

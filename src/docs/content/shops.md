@@ -12,7 +12,7 @@ This example shows how to make a shop in Godot by storing the player's [inventor
 
 ## Buy a sword with coins
 
-A player can buy a sword from a shop by spending coins. In this case
+A player can buy a sword from a shop by spending coins.
 
 ```gdscript
 # Define the shop's inventory
