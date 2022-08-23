@@ -2,11 +2,13 @@
 
 When a player wants a particular item that another player or non-player character has, they can acquire that item by giving away something valuable in return. For example, a sword can be traded for coins or a helmet.
 
-Trading is a way to acquire items in a game, just like enemy [drop tables](./drop-tables.md) or [quests](./quests.md). Another form of trading include [shops](./shop.md), where a player can browse a collection of items and buy them for a set price.
+Trading is a way to acquire items in a game, just like enemy [drop tables](./drop-tables.md) or [quests](./quests.md). Another form of trading include [shops](./shop.md), where a player can browse a predefined collection of items and buy them for a set price.
+
+Some items can only be acquired from other players, such as specially [crafted](./crafting.md) or [enchanted](./enchanting.md) items.
 
 Normally, trading requires both parties to be present and nearby. This makes trading different from [marketplaces](./marketplace.md) or [auction houses](./auction-house.md), where a player can put an item on sale and let other players buy or bid on the item without both parties having to be near each other at the same time.
 
-This example shows how to do trading Godot by storing the [inventories](./inventory.md) of the two trading parties in [Gotm contents](/src/docs/content.md).
+This example shows how to do trading in Godot by storing the [inventories](./inventory.md) of the two trading parties in [Gotm contents](/src/docs/content.md).
 
 ## Trade a sword for coins (single-player)
 

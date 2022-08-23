@@ -2,13 +2,15 @@
 
 A marketplace lets a player efficiently sell items to other players without both parties having to be near each other at the same time. Unlike direct [trading](./trading.md), a player can put an item for sale on the marketplace and go do something else while any potential buyers buys that item from the marketplace.
 
+Some items can only be acquired from other players, such as specially [crafted](./crafting.md) or [enchanted](./enchanting.md) items.
+
 A marketplace is a game mechanic that fosters a community and allows an in-game economy to form. The prices of items on the marketplace are usually based on supply and demand, and are organically determined by the players.
 
 Another variant of the marketplace is the [auction houses](./auction-house.md), where multiple players can place bids on the same item sale.
 
 This example shows how to make a marketplace in Godot by storing the [inventories](./inventory.md) of the seller and buyer in [Gotm contents](/src/docs/content.md). The marketplace items are also stored as [Gotm content](/src/docs/content.md), which allows a player to use advanced searching, filtering and sorting when browsing the marketplace.
 
-To learn how a game developer can manually add items to the marketplace, see [shops](./shop.md)
+To learn how a game developer can manually add items to the marketplace, see [shops](./shop.md).
 
 ## Add a precious gem to the marketplace
 

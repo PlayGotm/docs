@@ -4,13 +4,15 @@ An auction house lets a player efficiently sell items to other players without b
 
 Unlike direct [trading](./trading.md), a player can put an item for sale on the auction house and go do something else while any potential buyers buys that item from the auction house.
 
+Some items can only be acquired from other players, such as specially [crafted](./crafting.md) or [enchanted](./enchanting.md) items.
+
 An auction house is a game mechanic that fosters a community and allows an in-game economy to form. The prices of items on the auction house are usually based on supply and demand, and are organically determined by the players.
 
 A simpler variant of the auction house is the [marketplace](./auction-house.md), where items are bought at the listed price without a bidding process. In some games, such as the multiplayer game "World of Warcraft", the auction house and marketplace are combined so that there's both a bidding process and a "buyout" price. If a buyer is not interested in participating in a bidding process, they can pay the "buyout" amount to instantly get the item, like a marketplace.
 
 This example shows how to make an auction house in Godot by storing the [inventories](./inventory.md) of the seller and buyer in [Gotm contents](/src/docs/content.md). The auction house items are also stored as [Gotm content](/src/docs/content.md), which allows a player to use advanced searching, filtering and sorting when browsing the auction house.
 
-To learn how a game developer can manually add items to the auction house, see [shops](./shop.md)
+To learn how a game developer can manually add items to the auction house, see [shops](./shop.md).
 
 ## Add a precious gem to the auction house
 
@@ -75,7 +77,7 @@ sale_query.filter("user_id", auth.user_id)
 sale_query.sort("created", true)
 var gem_sale_contents = yield(GotmContent.list(sale_query), "completed")
 var gem_sale_content = gem_sale_contents[0]
-# Delete the sale
+# Remove the sale
 yield(GotmContent.delete(gem_sale_content), "completed")
 # Get the bids sorted by amount so that the highest bid comes first.
 var bid_query = GotmQuery.new()
