@@ -16,7 +16,11 @@ For example, the "game" article explains what a game on Gotm is. The article's c
 
 The source files are written in [Markdown](https://gotm.io/docs/markdown). You can preview Markdown while editing a source file on GitHub, in a [Markdown online editor](https://marked.js.org/demo/?version=master), or via your preferred text editor. Please keep in mind that [Gotm renders the Markdown differently](https://gotm.io/docs/markdown) from the previewers.
 
-## Writing tips
+## Tips for writing good documentation
+
+Writing good documentation that the reader can easily understand, search and navigate is hard. Here are some tips that may help you write good documentation.
+
+### The Five Ws
 
 Depending on the particular topic, the documentation on Gotm is targeted towards multiple types of readers, for example game developers, players, asset creators, streamers, social media influencers, and so on.
 
