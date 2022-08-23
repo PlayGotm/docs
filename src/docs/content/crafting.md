@@ -69,7 +69,7 @@ A game developer can update existing recipes without updating the game. This exa
 
 6. Click the Save button.
 
-## Delete a recipe without updating the game
+## Remove a recipe without updating the game
 
 A game developer can delete existing recipes without updating the game. This example shows how to delete the iron axe recipe. When the recipe is deleted it will immediately no longer be accessible to any player.
 
