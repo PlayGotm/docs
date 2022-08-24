@@ -1,3 +1,4 @@
+- <button icon="">[Home](/src/overview.md)</button>
 - <button icon="">[](/src/docs/content.md)</button>
   - <button icon="">[](/src/docs/content/api-reference.md)</button>
   - <button icon="">[](/src/docs/content/auction-house.md)</button>
