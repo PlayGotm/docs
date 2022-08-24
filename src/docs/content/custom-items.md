@@ -56,7 +56,7 @@ A player can describe the properties of a car by with the help of lightweight me
 
 A player can browse cars based on car stats. In this case a player is interested in fast cars with a top speed of at least 100.
 
-<include subject="map" min="speed" value="100">
+<include subject="map" prop="speed" value="100">
 
 [](/src/docs/content/utility/filter-min-snippet.md)
 

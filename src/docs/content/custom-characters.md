@@ -58,7 +58,7 @@ A player can describe the properties their character with the help of lightweigh
 
 A player can browse characters based on character stats. In this case a player is interested in strong characters with strength of at least 100.
 
-<include subject="character" min="strength" value="100">
+<include subject="character" prop="strength" value="100">
 
 [](/src/docs/content/utility/filter-min-snippet.md)
 
