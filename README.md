@@ -16,11 +16,80 @@ For example, the "game" article explains what a game on Gotm is. The article's c
 
 The source files are written in [Markdown](https://gotm.io/docs/markdown). You can preview Markdown while editing a source file on GitHub, in a [Markdown online editor](https://marked.js.org/demo/?version=master), or via your preferred text editor. Please keep in mind that [Gotm renders the Markdown differently](https://gotm.io/docs/markdown) from the previewers.
 
+## Help wanted
+
+The table below shows unwritten articles and chapters that are needed to make the documentation more complete.
+
+The example scenarios in the table are suggestions for how the topic can be explained through an underlying theme. For example, it's easier to explain how leaderboards can be used for high scores by giving concrete examples that make sense to a game developer.
+
+Everyone is welcome to come up with their own ideas for how a game developer can implement various game mechanics with the help of Gotm.
+
+| Article | Chapter                                 | Example scenario                                                                                                      |
+| ------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Content | Character progression                   | Use content to save a role-playing character's stats, level or skill tree.                                            |
+|         | Characters and enemies                  | Use content to add/edit/delete enemies and their stats or abilities.                                                  |
+|         | Destructible terrain like Minecraft     | Use content to store terrain chunks.                                                                                  |
+|         | Dialogues                               | Use content to add/edit/delete dialogues.                                                                             |
+|         | Downloadable content or expansion packs | Use content to release downloadable content.                                                                          |
+|         | Drop tables                             | Use content to configure which items an enemy drops when defeated, and their drop rates.                              |
+|         | Events and seasons                      | Use content to configure special events or seasons that are triggered by a time or manually by the developer.         |
+|         | Game configuration and balancing        | Use content to configure a game and balance it by tweaking attributes of enemies, items or abilities.                 |
+|         | Custom abilities                        | Use content to let players create dynamic abilities. Oblivion could be used as an example game                        |
+|         | Skill trees                             | Use content to define skill trees and to save a player's progression in the tree.                                     |
+|         | Game saves                              | Use content to store a player's game saves.                                                                           |
+|         | Items                                   | Use content to add/edit/delete items of a game.                                                                       |
+|         | Maps                                    | Use content to add/edit/delete maps of a game.                                                                        |
+|         | Mods                                    | Use content to let players create mods and share them with other players.                                             |
+|         | Player messages like Dark Souls         | Use content to let players leave messages for other players like they can in the game "Dark Souls".                   |
+|         | Player profiles                         | Use content to let players create a profile with, for example, a picture and a description.                           |
+|         | Quests                                  | Use content to add/edit/delete quests of a game.                                                                      |
+|         | Synchronize data between devices        | Use content to synchronize some player data between devices.                                                          |
+|         | Turn-based multiplayer games            | Use content to store the state of an ongoing match in a turn-based multiplayer game without needing peer connections. |
+|         |                                         |                                                                                                                       |
+
+_Documentation that everyone is welcome to contribute._
+
+The table below lists documentation that is intended to be created by Gotm staff in the near future.
+
+| Article            | Chapter                  | Description                                                                                     |
+| ------------------ | ------------------------ | ----------------------------------------------------------------------------------------------- |
+| Content            | Limits                   | Explain the limitations of the content API.                                                     |
+|                    | Performance optimization | Document performance caveats and ways to optimize the usage of the content API.                 |
+|                    | API reference            | API details extracted from the plugin. Maybe include examples per function and property.        |
+| Creator dashboard  |                          | Explain what it is and what you can do in it.                                                   |
+| Game dashboard     |                          | Explain what it is and what you can do in it.                                                   |
+| Game pack          |                          | Explain what it is on Gotm and when you encounter it.                                           |
+| Game promo         |                          | Explain what it is on Gotm and when you encounter it.                                           |
+| Game               |                          | Explain what it is on Gotm and when you encounter it.                                           |
+| Jam dashboard      |                          | Explain what it is and what you can do in it.                                                   |
+| Jam                |                          | Explain what it is on Gotm and when you encounter it.                                           |
+| Playlist dashboard |                          | Explain what it is and what you can do in it.                                                   |
+| Playlist           |                          | Explain what it is on Gotm is and when you encounter it.                                        |
+| Product dashboard  |                          | Explain what it is and what you can do in it.                                                   |
+| Product            |                          | Explain what it is on Gotm and when you encounter it.                                           |
+| Pulse              |                          | Explain what the Pulse premium plan is and how it works.                                        |
+| Settings dashboard |                          | Explain what it is and what you can do in it.                                                   |
+| Studio dashboard   |                          | Explain what it is and what you can do in it.                                                   |
+| Studio             |                          | Explain what it is on Gotm and when you encounter it.                                           |
+| User               |                          | Explain what it is on Gotm and when you encounter it.                                           |
+| Revenue share      |                          | Explain how Gotm's revenue share model works in detail, and how it compares to other platforms. |
+| Web player         |                          | Explain what the web player is and what you can do in it.                                       |
+
+_Documentation that the Gotm staff intends to write._
+
 ## Tips for writing good documentation
 
 Writing good documentation that the reader can easily understand, search and navigate is hard. Here are some tips that may help you write good documentation.
 
-### The Five Ws
+### Guidelines
+
+The documentation in this repository follows a set of guidelines that should be followed.
+
+- Avoid acronyms unless absolutely necessary or if the term is only referred to by its acronym. For example, "role-playing game" should be used instead of "RPG" because not everyone knows what "RPG" means. On the other hand, using "HTML" is ok, because no one knows it as "HyperText Markup Language".
+- Use "and" instead of "&".
+- Capitalize words in a title as you would in a normal sentence. For example, capitalize your title like "How to make a Godot game" instead of "How to Make a Godot Game".
+
+### The five Ws
 
 Depending on the particular topic, the documentation on Gotm is targeted towards multiple types of readers, for example game developers, players, asset creators, streamers, social media influencers, and so on.
 
