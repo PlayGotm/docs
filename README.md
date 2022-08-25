@@ -24,6 +24,8 @@ The example scenarios in the table are suggestions for how the topic can be expl
 
 Everyone is welcome to come up with their own ideas for how a game developer can implement various game mechanics with the help of Gotm.
 
+**Documentation that everyone is welcome to contribute**
+
 | Article | Chapter                                 | Example scenario                                                                                                      |
 | ------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Content | Character progression                   | Use content to save a role-playing character's stats, level or skill tree.                                            |
@@ -46,9 +48,9 @@ Everyone is welcome to come up with their own ideas for how a game developer can
 |         | Synchronize data between devices        | Use content to synchronize some player data between devices.                                                          |
 |         | Turn-based multiplayer games            | Use content to store the state of an ongoing match in a turn-based multiplayer game without needing peer connections. |
 
-_Documentation that everyone is welcome to contribute._
-
 The table below lists documentation that is intended to be created by Gotm staff in the near future.
+
+**Documentation that the Gotm staff intends to write**
 
 | Article            | Chapter                  | Description                                                                                     |
 | ------------------ | ------------------------ | ----------------------------------------------------------------------------------------------- |
@@ -73,8 +75,6 @@ The table below lists documentation that is intended to be created by Gotm staff
 | User               |                          | Explain what it is on Gotm and when you encounter it.                                           |
 | Revenue share      |                          | Explain how Gotm's revenue share model works in detail, and how it compares to other platforms. |
 | Web player         |                          | Explain what the web player is and what you can do in it.                                       |
-
-_Documentation that the Gotm staff intends to write._
 
 ## Tips for writing good documentation
 
