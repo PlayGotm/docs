@@ -35,6 +35,7 @@
 - <button icon="">[](/src/docs/game-pack.md)</button>
 - <button icon="">[](/src/docs/game-promo.md)</button>
 - <button icon="">[](/src/docs/game.md)</button>
+  - <button icon="">[](/src/docs/game/create-a-game.md)</button>
 - <button icon="">[GDGotm](/src/docs/gdgotm.md)</button>
 - <button icon="">[](/src/docs/jam-dashboard.md)</button>
 - <button icon="">[](/src/docs/jam.md)</button>
