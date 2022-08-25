@@ -1,4 +1,4 @@
-# Welcome to the official documentation for Gotm!
+# 📖 Welcome to the official documentation for Gotm! 📖
 
 This repository contains the source material for the [official documentation for Gotm](https://gotm.io/docs). Anyone may improve or add to the documentation by creating a [pull request](https://github.com/PlayGotm/docs/pulls) or by reporting an [issue](https://github.com/PlayGotm/docs/issues).
 
@@ -20,7 +20,7 @@ The source files are written in [Markdown](https://gotm.io/docs/markdown). You c
 
 When you have created a new article or chapter, it should probably appear in the [side menu on Gotm](https://gotm.io/docs). To make this happen, you need to add your article or chapter to the [menu's source file](/src/menu.md). See the menu's source file for more guidance.
 
-## Help wanted
+## Help wanted 🙏
 
 The table below shows unwritten articles and chapters that are needed to make the documentation more complete.
 
