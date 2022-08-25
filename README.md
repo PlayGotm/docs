@@ -45,7 +45,6 @@ Everyone is welcome to come up with their own ideas for how a game developer can
 |         | Quests                                  | Use content to add/edit/delete quests of a game.                                                                      |
 |         | Synchronize data between devices        | Use content to synchronize some player data between devices.                                                          |
 |         | Turn-based multiplayer games            | Use content to store the state of an ongoing match in a turn-based multiplayer game without needing peer connections. |
-|         |                                         |                                                                                                                       |
 
 _Documentation that everyone is welcome to contribute._
 
