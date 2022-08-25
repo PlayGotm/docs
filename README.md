@@ -24,7 +24,7 @@ The example scenarios in the table are suggestions for how the topic can be expl
 
 Everyone is welcome to come up with their own ideas for how a game developer can implement various game mechanics with the help of Gotm.
 
-**Documentation that everyone is welcome to contribute**
+**Documentation that everyone is welcome to contribute (your own ideas are welcome too!)**
 
 | Article | Chapter                                 | Example scenario                                                                                                      |
 | ------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
