@@ -16,6 +16,10 @@ For example, the "game" article explains what a game on Gotm is. The article's c
 
 The source files are written in [Markdown](https://gotm.io/docs/markdown). You can preview Markdown while editing a source file on GitHub, in a [Markdown online editor](https://marked.js.org/demo/?version=master), or via your preferred text editor. Please keep in mind that [Gotm renders the Markdown differently](https://gotm.io/docs/markdown) from the previewers.
 
+### Adding a new article or chapter to the side menu
+
+When you have created a new article or chapter, it should probably appear in the [side menu on Gotm](https://gotm.io/docs). To make this happen, you need to add your article or chapter to the [menu's source file](/src/menu.md). See the menu's source file for more guidance.
+
 ## Help wanted
 
 The table below shows unwritten articles and chapters that are needed to make the documentation more complete.

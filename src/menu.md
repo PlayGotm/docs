@@ -1,3 +1,17 @@
+<!--
+
+If you need to add a new article, add it to the list below. For example, if your article is called "My Article", add the following line:
+- [<button icon="file"></button>](/src/docs/my-article.md)
+
+If you need to add a new chapter to an article, add it as a sublist to the article. For example, if your chapter is called "My Chapter", and its article is called "My Article", add the following line below the article (note the spaces in the beginning):
+  - [<button icon="file"></button>](/src/docs/my-article/my-chapter.md)
+
+So if there is only one article "My Article", which has only one chapter "My Chapter", this file would look like this:
+- [<button icon="file"></button>](/src/docs/my-article.md)
+  - [<button icon="file"></button>](/src/docs/my-article/my-chapter.md)
+
+ -->
+
 - [<button icon="home">Home</button>](/src/overview.md)
 - [<button icon="gdgotm">GDGotm</button>](/src/docs/gdgotm.md)
 - [<button icon="content"></button>](/src/docs/content.md)
