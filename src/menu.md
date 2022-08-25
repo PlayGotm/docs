@@ -1,4 +1,4 @@
-- [<button icon="">Home</button>](/src/overview.md)
+- [<button icon="home">Home</button>](/src/overview.md)
 - [<button icon=""></button>](/src/docs/content.md)
   - [<button icon=""></button>](/src/docs/content/auction-house.md)
   - [<button icon=""></button>](/src/docs/content/crafting.md)
