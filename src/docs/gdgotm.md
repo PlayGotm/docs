@@ -11,9 +11,9 @@ GDGotm contains the following features:
 <!-- prettier-ignore -->
 | Feature | What can it be used for? | Can it be used for games not hosted on Gotm? | Does it support offline or single-player games? | Does it support online or multi-player games? |
 | --- | --- | --- | --- | --- |
-| [Content](/src/docs/content.md) | [Mods](content/mods.md), [marketplace](content/marketplace.md), [crafting](content/crafting.md), and [more](/src/docs/content.md). | ☑️Yes | [☑️Yes](/src/docs/content/mix-local-and-global-contents.md) | ☑️Yes | ☑️Yes |
-| [Leaderboard](/src/docs/leaderboard.md) | High scores, ranks, leagues, seasons, score distribution graphs. | ☑️ Yes | [☑️Yes](/src/docs/leaderboard/mix-local-and-global-scores.md) | ☑️Yes | 
-| [Lobby](/src/docs/lobby.md) | [Matchmaking](lobby/matchmaking.md), discover players and establish peer-to-peer connections. | LAN only | | ☑️Yes |
+| [Content](/src/docs/content.md) | [Mods](content/mods.md), [marketplace](content/marketplace.md), [crafting](content/crafting.md), and [more](/src/docs/content.md). | Yes | [Yes](/src/docs/content/mix-local-and-global-contents.md) | Yes | Yes |
+| [Leaderboard](/src/docs/leaderboard.md) | High scores, ranks, leagues, seasons, score distribution graphs. |  Yes | [Yes](/src/docs/leaderboard/mix-local-and-global-scores.md) | Yes | 
+| [Lobby](/src/docs/lobby.md) | [Matchmaking](lobby/matchmaking.md), discover players and establish peer-to-peer connections. | LAN only | | Yes |
 
 GDGotm supports Godot version 3.1.0 and newer.
 
