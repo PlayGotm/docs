@@ -1,3 +1,14 @@
+#### Leaderboards
+
+Let your players compete against eachother or themselves.
+
+<a href="/docs/leaderboards">
+  <OutlinedButton padding="10px 15px" margin="10px">
+    Get started
+  </OutlinedButton>
+</a>
+<br />
+
 # Leaderboard
 
 BETA NOTICE: Leaderboards are currently beta features and are stored locally unless the game is running on Gotm, even if you have provided a project key. Using beta features is safe when using the official [GDScript plugin](/about/plugin).

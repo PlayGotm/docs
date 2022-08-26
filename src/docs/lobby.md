@@ -1,3 +1,33 @@
+#### Lobbies
+
+Connect players without an invitation URL.
+
+<a href="/docs/lobbies">
+  <OutlinedButton padding="10px 15px" margin="10px">
+    Get started
+  </OutlinedButton>
+</a>
+<br />
+
+#### Fetch lobbies
+
+Access Gotm's powerful lobby system that lets you fetch lobbies with custom filters and sorting.
+
+[Matchmaking](/docs/fetch-lobbies#matchmaking) - Match players based on their rank.
+
+[Quick-join](/docs/fetch-lobbies#quick-join) - Let your players join a lobby in a single click without browsing or searching in a lobby browser.
+
+[Global lobbies](/docs/fetch-lobbies#global-lobbies) - Give your players the illusion of always-running dedicated servers!
+
+[Lobby browser](/docs/fetch-lobbies#lobby-browser) - Design your own lobby browser.
+
+<a href="/docs/fetch-lobbies">
+  <OutlinedButton padding="10px 15px" margin="10px">
+    Get started
+  </OutlinedButton>
+</a>
+<br />
+
 ### Lobbies
 
 The [GDScript plugin](/about/plugin) gives you a complete solution for managing player-hosted lobbies.

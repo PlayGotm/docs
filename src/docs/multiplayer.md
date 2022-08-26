@@ -1,3 +1,14 @@
+#### Networked multiplayer
+
+On Gotm your players can connect without plugins or port-forwarding.
+
+<a href="/docs/networked-multiplayer">
+  <OutlinedButton padding="10px 15px" margin="10px">
+    Get started
+  </OutlinedButton>
+</a>
+<br />
+
 ### Networked multiplayer
 
 On Gotm your players can connect to each other using [NetworkedMultiplayerENet](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html) or [PacketPeerUDP](https://docs.godotengine.org/en/stable/classes/class_packetpeerudp.html) without plugins or port-forwarding.
