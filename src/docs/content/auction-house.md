@@ -14,6 +14,12 @@ This example shows how to make an auction house in Godot by storing the [invento
 
 To learn how a game developer can manually add items to the auction house, see [shops](./shop.md).
 
+<include>
+
+[](/src/utility/gdgotm-notice.md)
+
+</include>
+
 ## Add a precious gem to the auction house
 
 When a player wants to sell a precious gem through the auction house, they can add it to the auction house for a desired price and hope that another player bids on it. In this case the player wants to sell the gem for a starting price of 50 coins.

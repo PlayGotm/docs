@@ -10,6 +10,12 @@ A shop is a way to acquire items in a game, just like enemy [drop tables](./drop
 
 This example shows how to make a shop in Godot by storing the player's [inventory](./inventory.md) and the shop's items in [Gotm contents](/src/docs/content.md).
 
+<include>
+
+[](/src/utility/gdgotm-notice.md)
+
+</include>
+
 ## Buy a sword with coins
 
 A player can buy a sword from a shop by spending coins.

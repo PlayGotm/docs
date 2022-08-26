@@ -12,6 +12,12 @@ This example shows how to make a marketplace in Godot by storing the [inventorie
 
 To learn how a game developer can manually add items to the marketplace, see [shops](./shop.md).
 
+<include>
+
+[](/src/utility/gdgotm-notice.md)
+
+</include>
+
 ## Add a precious gem to the marketplace
 
 When a player wants to sell a precious gem through the marketplace, they can add it to the marketplace for a desired price and hope that another player buys it. In this case the player wants to sell the gem for 50 coins.

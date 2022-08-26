@@ -6,6 +6,12 @@ Minecraft is a popular game where a player first crafts wooden tools, which lets
 
 This example shows how to do crafting in Godot by storing the recipes and the player's [inventory](./inventory.md) in [Gotm contents](/src/docs/content.md).
 
+<include>
+
+[](/src/utility/gdgotm-notice.md)
+
+</include>
+
 ## Craft an iron axe
 
 A player can craft an iron axe from wood and iron.

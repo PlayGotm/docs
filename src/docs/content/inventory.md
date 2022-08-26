@@ -4,6 +4,12 @@ An inventory contains everything a player is carrying in a game and is used for 
 
 This example shows how to make an inventory in Godot by using an array. The inventory is saved to a [Gotm content](/src/docs/content.md), which makes it accessible to other players and devices if needed.
 
+<include>
+
+[](/src/utility/gdgotm-notice.md)
+
+</include>
+
 ## Save inventory
 
 A player can save their inventory as any Godot object. They can then load the inventory later when restarting the game.
