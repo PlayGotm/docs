@@ -56,29 +56,29 @@ The table below lists documentation that is intended to be created by Gotm staff
 
 **Documentation that the Gotm staff intends to write**
 
-| Article            | Chapter                  | Description                                                                                     |
-| ------------------ | ------------------------ | ----------------------------------------------------------------------------------------------- |
-| Content            | Limits                   | Explain the limitations of the content API.                                                     |
-|                    | Performance optimization | Document performance caveats and ways to optimize the usage of the content API.                 |
-|                    | API reference            | API details extracted from the plugin. Maybe include examples per function and property.        |
-| Creator dashboard  |                          | Explain what it is and what you can do in it.                                                   |
-| Game dashboard     |                          | Explain what it is and what you can do in it.                                                   |
-| Game pack          |                          | Explain what it is on Gotm and when you encounter it.                                           |
-| Game promo         |                          | Explain what it is on Gotm and when you encounter it.                                           |
-| Game               |                          | Explain what it is on Gotm and when you encounter it.                                           |
-| Jam dashboard      |                          | Explain what it is and what you can do in it.                                                   |
-| Jam                |                          | Explain what it is on Gotm and when you encounter it.                                           |
-| Playlist dashboard |                          | Explain what it is and what you can do in it.                                                   |
-| Playlist           |                          | Explain what it is on Gotm is and when you encounter it.                                        |
-| Product dashboard  |                          | Explain what it is and what you can do in it.                                                   |
-| Product            |                          | Explain what it is on Gotm and when you encounter it.                                           |
-| Pulse              |                          | Explain what the Pulse premium plan is and how it works.                                        |
-| Settings dashboard |                          | Explain what it is and what you can do in it.                                                   |
-| Studio dashboard   |                          | Explain what it is and what you can do in it.                                                   |
-| Studio             |                          | Explain what it is on Gotm and when you encounter it.                                           |
-| User               |                          | Explain what it is on Gotm and when you encounter it.                                           |
-| Revenue share      |                          | Explain how Gotm's revenue share model works in detail, and how it compares to other platforms. |
-| Web player         |                          | Explain what the web player is and what you can do in it.                                       |
+| Article            | Chapter                  | Description                                                                                                       |
+| ------------------ | ------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| Content            | Limits                   | Explain the limitations of the content API.                                                                       |
+|                    | Performance optimization | Document performance caveats and ways to optimize the usage of the content API.                                   |
+|                    | API reference            | API details extracted from the plugin. Maybe include examples per function and property.                          |
+| Creator dashboard  |                          | Explain what it is and what you can do in it.                                                                     |
+| Game dashboard     |                          | Explain what it is and what you can do in it.                                                                     |
+| Game pack          |                          | Explain what it is on Gotm and when you encounter it.                                                             |
+| Game promo         |                          | Explain what it is on Gotm and when you encounter it.                                                             |
+| Game               |                          | Explain what it is on Gotm and when you encounter it.                                                             |
+| Jam dashboard      |                          | Explain what it is and what you can do in it.                                                                     |
+| Jam                |                          | Explain what it is on Gotm and when you encounter it.                                                             |
+| Playlist dashboard |                          | Explain what it is and what you can do in it.                                                                     |
+| Playlist           |                          | Explain what it is on Gotm is and when you encounter it.                                                          |
+| Product dashboard  |                          | Explain what it is and what you can do in it.                                                                     |
+| Product            |                          | Explain what it is on Gotm and when you encounter it.                                                             |
+| Pulse              |                          | Explain what the Pulse premium plan is and how it works.                                                          |
+| Settings dashboard |                          | Explain what it is and what you can do in it.                                                                     |
+| Studio dashboard   |                          | Explain what it is and what you can do in it.                                                                     |
+| Studio             |                          | Explain what it is on Gotm and when you encounter it.                                                             |
+| User               |                          | Explain what it is on Gotm and when you encounter it.                                                             |
+| Pricing            |                          | Explain how Gotm's fees, pricing and revenue share model works in detail, and how it compares to other platforms. |
+| Web player         |                          | Explain what the web player is and what you can do in it.                                                         |
 
 ## Tips for writing good documentation
 
