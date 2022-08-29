@@ -1,18 +1,9 @@
-#### Networked multiplayer
-
-On Gotm your players can connect without plugins or port-forwarding.
-
-<a href="/docs/networked-multiplayer">
-  <OutlinedButton padding="10px 15px" margin="10px">
-    Get started
-  </OutlinedButton>
-</a>
-<br />
-
-### Networked multiplayer
+# Multiplayer
 
 On Gotm your players can connect to each other using [NetworkedMultiplayerENet](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html) or [PacketPeerUDP](https://docs.godotengine.org/en/stable/classes/class_packetpeerudp.html) without plugins or port-forwarding.
-Players connect through a unique invitation link that is generated when a player hosts a game. Try it out!
+Players connect through a unique invitation link that is generated when a player hosts a game.
+
+Try it out!
 
 <Game src="game-examples/networkedmultiplayerenet" />
 
@@ -36,16 +27,18 @@ _Press "Host" to generate an invitation link. Join the game by entering the link
 The above game example uses NetworkedMultiplayerENet to connect players in a shared drawing session.
 See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/NetworkedMultiplayerENet) for more details.
 
-<Anchor id="get-started"></Anchor>
+<include>
 
-#### Get started
+[](/src/utility/gdgotm-notice.md)
+
+</include>
+
+# Get started
 
 You can quickly get started by downloading the [example project](https://github.com/PlayGotm/Game-Examples/releases/latest/download/NetworkedMultiplayerENet.zip).
 The [web player](/web-player) is recommended for testing your game on Gotm without having to sign in.
 
-<Anchor id="1-generate-invitation-link"></Anchor>
-
-##### 1. Generate invitation link
+# Generate invitation link
 
 When you call [NetworkedMultiplayerENet.create_server](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html#class-networkedmultiplayerenet-method-create-server) or [PacketPeerUDP.listen](https://docs.godotengine.org/en/stable/classes/class_packetpeerudp.html#class-packetpeerudp-method-listen) Gotm automatically generates an invitation link.
 The link is shown in a popup, so it can easily be copied and shared with other players.
@@ -56,9 +49,7 @@ peer.create_server(8070)
 get_tree().set_network_peer(peer)
 ```
 
-<Anchor id="2-accept-invitation"></Anchor>
-
-##### 2. Accept invitation
+# Accept invitation
 
 Accept the invitation by entering the link in another browser window.
 You can now connect to the host using [NetworkedMultiplayerENet.create_client](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html#class-networkedmultiplayerenet-method-create-server) or with your custom PacketPeerUDP code.
@@ -69,9 +60,7 @@ peer.create_client("127.0.0.1", 8070)
 get_tree().set_network_peer(peer)
 ```
 
-<Anchor id="3-find-the-host"></Anchor>
-
-##### 3. (Optional) Find the host
+# (Optional) Find the host
 
 All players that have accepted the invitation have joined a shared virtual local network.
 This allows your game to send and receive RPC commands and packets to these players using methods like [Node.rpc](https://docs.godotengine.org/en/stable/classes/class_node.html?#class-node-method-rpc) or [PacketPeerUDP.put_packet](https://docs.godotengine.org/en/stable/classes/class_packetpeer.html#class-packetpeer-method-put-packet). You can read more about Godot's networking and RPC commands [here](https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html).

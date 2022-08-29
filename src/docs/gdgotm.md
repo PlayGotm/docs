@@ -17,13 +17,13 @@ GDGotm contains the following features:
 
 GDGotm supports Godot version 3.1.0 and newer.
 
-## Install
+# Install
 
 1. [Download the plugin](https://github.com/PlayGotm/GDGotm/archive/refs/heads/master.zip) and extract the contents into your Godot project. You can also download the plugin via [Godot's asset library](https://docs.godotengine.org/en/stable/tutorials/assetlib/using_assetlib.html#in-the-editor) by searching for `GDGotm`.
 
 1. Add the `gotm/Gotm.gd` file to your project's [autoloads](https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html#autoload). Make sure the autoload is named `Gotm`. It must be named `Gotm` for it to work.
 
-## Initialize
+# Initialize
 
 You must initialize GDGotm before you can use it in your game.
 
@@ -33,7 +33,7 @@ Gotm.initialize()
 
 GDGotm is in [local mode](#local-mode-for-offline-or-single-player-games) by default. To enable online mode, see [Global mode for online or multi-player games](#global-mode-for-online-or-multi-player-games).
 
-## Local mode for offline or single-player games
+# Local mode for offline or single-player games
 
 GDGotm is in local mode by default and doesn't require an internet connection or a Gotm account.
 
@@ -41,7 +41,7 @@ While in local mode, [all features](#gdgotm-features) that support offline or si
 
 Features that do not support offline or single-player games do not work in local mode.
 
-## Global mode for online or multi-player games
+# Global mode for online or multi-player games
 
 GDGotm is in [local mode](#local-mode-for-offline-or-single-player-games) by default. To enable global mode you must have a Gotm account.
 
@@ -62,7 +62,7 @@ config.project_key = ""
 Gotm.initialize(config)
 ```
 
-## Create local data in global mode
+# Create local data in global mode
 
 While GDGotm is in [global mode](#global-mode-for-online-or-multi-player-games), any newly created data is global by default.
 
@@ -72,13 +72,13 @@ You can also [disable global mode](#disable-global-mode) completely for a partic
 
 You can learn more by clicking the links in the [feature table's](#gdgotm-features) offline games support column.
 
-## Disable global mode
+# Disable global mode
 
 When you enable [global mode](#global-mode-for-online-or-multi-player-games), all supported features are made global.
 
 If you want a feature to remain in local mode, you can disable global mode for that particular feature. You can learn more by clicking the links in the [feature table's](#gdgotm-features) offline games support column.
 
-## Enable detailed logs
+# Enable detailed logs
 
 When you need to debug or troubleshoot issues related to GDGotm, you can enable verbose logs to be printed in Godot's console.
 

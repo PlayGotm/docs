@@ -1,37 +1,15 @@
-#### Lobbies
+# Lobbies
 
-Connect players without an invitation URL.
+[GDGotm](/src/docs/gdgotm.md) gives you a complete solution for managing player-hosted lobbies in your Godot game. It lets your players host and join multiplayer sessions within your game without the need of an invitation link.
 
-<a href="/docs/lobbies">
-  <OutlinedButton padding="10px 15px" margin="10px">
-    Get started
-  </OutlinedButton>
-</a>
-<br />
+[Matchmaking](#matchmaking) - Match players based on their rank.
 
-#### Fetch lobbies
+[Quick-join](#quick-join) - Let your players join a lobby in a single click without browsing or searching in a lobby browser.
 
-Access Gotm's powerful lobby system that lets you fetch lobbies with custom filters and sorting.
+[Global lobbies](#global-lobbies) - Give your players the illusion of always-running dedicated servers!
 
-[Matchmaking](/docs/fetch-lobbies#matchmaking) - Match players based on their rank.
+[Lobby browser](#lobby-browser) - Design your own lobby browser.
 
-[Quick-join](/docs/fetch-lobbies#quick-join) - Let your players join a lobby in a single click without browsing or searching in a lobby browser.
-
-[Global lobbies](/docs/fetch-lobbies#global-lobbies) - Give your players the illusion of always-running dedicated servers!
-
-[Lobby browser](/docs/fetch-lobbies#lobby-browser) - Design your own lobby browser.
-
-<a href="/docs/fetch-lobbies">
-  <OutlinedButton padding="10px 15px" margin="10px">
-    Get started
-  </OutlinedButton>
-</a>
-<br />
-
-### Lobbies
-
-The [GDScript plugin](/about/plugin) gives you a complete solution for managing player-hosted lobbies.
-It lets your players host and join multiplayer sessions within your game without the need of an invitation link.
 Try it out!
 
 <HorizontalList>
@@ -56,22 +34,19 @@ _Host a lobby in one screen and refresh the list in the other screen. Click "Joi
   </ExternalLink>
 </HorizontalList>
 
-The above game example uses the GDScript plugin and [NetworkedMultiplayerENet](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html) to connect players in a shared drawing session.
+The above game example uses GDGotm and [NetworkedMultiplayerENet](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html) to connect players in a shared drawing session.
 See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/Lobbies%20-%20Host%20and%20join) for more details.
 
-<Anchor id="get-started"></Anchor>
+<include>
 
-#### Get started
+[](/src/utility/gdgotm-notice.md)
 
-Install the plugin from the [AssetLib](https://docs.godotengine.org/en/stable/tutorials/assetlib/using_assetlib.html#in-the-editor) in the Godot Editor and follow its installation instructions.
-The [example project](https://github.com/PlayGotm/Game-Examples/releases/latest/download/Lobbies.-.Host.and.join.zip) already comes with the plugin installed.
+</include>
 
-You do not need to run your game on Gotm to test the plugin on your local network.
+You do not need to run your game on Gotm to test lobbies on your local network.
 To test it across networks, use the [web player](/web-player).
 
-<Anchor id="1-host-lobby"></Anchor>
-
-##### 1. Host lobby
+# Host lobby
 
 Call [Gotm.host_lobby](/docs/api-reference#gotm-host-lobby) to host a lobby.
 
@@ -100,9 +75,7 @@ var peer = NetworkedMultiplayerENet.new()
 peer.create_server(8070)
 ```
 
-<Anchor id="2-fetch-lobbies"></Anchor>
-
-##### 2. Fetch lobbies
+# Fetch lobbies
 
 Before you can join the lobby you must fetch it by calling [GotmLobbyFetch.first](/docs/api-reference#gotmlobbyfetch-first).
 This call is asynchronous, which means that you must use [yield](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html?#coroutines-with-yield) to retrieve its return value.
@@ -114,9 +87,7 @@ var lobbies = yield(fetch.first(), "completed")
 
 If your lobby is not fetched, make sure you set its [hidden](/docs/api-reference#gotmlobby-hidden) property to `false` in the previous step.
 
-<Anchor id="3-join-lobby"></Anchor>
-
-##### 3. Join lobby
+# Join lobby
 
 Using the lobbies fetched in the previous step, you can join the lobby using [GotmLobby.join](/docs/api-reference#gotmlobby-join).
 This call is asynchronous, which means that you must use [yield](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html?#coroutines-with-yield) to retrieve its return value.
@@ -135,9 +106,9 @@ var peer = NetworkedMultiplayerENet.new()
 peer.create_client(Gotm.lobby.host.address, 8070)
 ```
 
-### Fetch lobbies
+# Browse lobbies
 
-The [GDScript plugin](/about/plugin) gives you access to Gotm's powerful lobby system that lets you fetch lobbies with custom filters and sorting.
+[GDGotm](/src/docs/gdgotm.md) gives you access to Gotm's powerful lobby system that lets you fetch lobbies with custom filters and sorting.
 Try it out!
 
 <Game src="game-examples/lobbies-fetch" />
@@ -159,27 +130,18 @@ _You can filter and sort your lobbies any way you want with custom properties._
   </ExternalLink>
 </HorizontalList>
 
-The above game example uses the GDScript plugin to fetch existing lobbies with custom properties.
+The above game example uses the [GDGotm](/src/docs/gdgotm.md) to fetch existing lobbies with custom properties.
 It fetches lobbies depending on its map, difficulty and name.
 It also sorts the results depending on the lobby's creation time or difficulty.
 See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/Lobbies%20-%20Fetch) for more details.
 
-<Anchor id="use-cases"></Anchor>
+GDGotm provides you with the basic building blocks of a lobby system, which gives you much freedom in your own design of your game's lobby experience.
 
-#### Use cases
-
-Gotm's GDScript plugin provides you the basic building blocks of a lobby system, which gives you much freedom in your own design of your game's lobby experience.
-Install the plugin directly from the [AssetLib](https://docs.godotengine.org/en/stable/tutorials/assetlib/using_assetlib.html#in-the-editor) in the Godot Editor.
-
-Explore the use cases below to find some inspiration for your game's lobby system.
-
-<Anchor id="lobby-browser"></Anchor>
-
-##### Lobby browser
+## Lobby browser
 
 See the [example project](/game-examples/lobbies-fetch) for a live lobby browser example.
 
-[GotmLobbyFetch](/docs/api-reference#gotmlobbyfetch) provides stateful pagination out-of-the-box. It can fetch lobbies page-by-page both forwards and backwards.
+`GotmLobbyFetch` provides stateful pagination out-of-the-box. It can fetch lobbies page-by-page both forwards and backwards.
 
 ```
 var fetch = GotmLobbyFetch.new()
@@ -194,9 +156,7 @@ lobbies = yield(fetch.next(5), "completed")
 ### And so on...
 ```
 
-<Anchor id="quick-join"></Anchor>
-
-##### Quick-join
+## Quick-join
 
 Let your players join a lobby without browsing or searching in a lobby browser.
 With quick-joining you could present your players with a simple "Play" button that automatically joins the lobby with most players.
@@ -211,9 +171,7 @@ func quick_join():
   var success = yield(lobbies[0].join(), "completed")
 ```
 
-<Anchor id="global-lobbies"></Anchor>
-
-##### Global lobbies
+## Global lobbies
 
 Give your players the illusion of always-running dedicated servers!
 
@@ -234,11 +192,9 @@ func join_global_lobby(mode):
     Gotm.lobby.hidden = false
 ```
 
-<Anchor id="matchmaking"></Anchor>
+## Matchmaking
 
-##### Matchmaking
-
-Match players based on their rank by limiting the fetched lobbies to a rank range using [GotmLobbyFetch.sort_min](/docs/api-reference#gotmlobbyfetch-sort-min) and [GotmLobbyFetch.sort_max](/docs/api-reference#gotmlobbyfetch-sort-max).
+Match players based on their rank by limiting the fetched lobbies to a rank range using `GotmLobbyFetch.sort_min` and `GotmLobbyFetch.sort_max`.
 
 Keep widening the range until a match is found.
 
@@ -259,32 +215,20 @@ func do_matchmaking(rank):
       fetch.sort_max += 1
 ```
 
-<Anchor id="get-started"></Anchor>
-
-#### Get started
-
-Install the plugin from the [AssetLib](https://docs.godotengine.org/en/stable/tutorials/assetlib/using_assetlib.html#in-the-editor) in the Godot Editor and follow its installation instructions.
-The [example project](https://github.com/PlayGotm/Game-Examples/releases/latest/download/Lobbies.-.Fetch.zip) already comes with the plugin installed.
-
-This example uses [GotmDebug.add_lobby](/docs/api-reference#gotmdebug-add-lobby) to add test lobbies.
-Test lobbies do not appear when you run your game on Gotm.
-
-<Anchor id="1-create-test-lobby"></Anchor>
-
-##### 1. Create test lobby
+## Create test lobby
 
 To try out Gotm's lobby-fetching system you first need lobbies to fetch.
-The plugin lets you create test lobbies that behave as real lobbies.
+GDGotm lets you create test lobbies that behave as real lobbies.
 This makes it quick and easy to try out the system.
 
-Call [GotmDebug.add_lobby](/docs/api-reference#gotmdebug-add-lobby) to host a lobby without joining it.
+Call `GotmDebug.add_lobby` to host a lobby without joining it.
 
 ```
 var lobby = GotmDebug.add_lobby()
 lobby.name = "My Test Lobby!"
 ```
 
-Lobbies are hidden from fetch results by default. Make the lobby visible by setting its [hidden](/docs/api-reference#gotmlobby-hidden) property to `false`.
+Lobbies are hidden from fetch results by default. Make the lobby visible by setting its `hidden` property to `false`.
 
 ```
 lobby.hidden = false
@@ -297,36 +241,32 @@ var fetch = GotmLobbyFetch.new()
 var lobbies = yield(fetch.first(), "completed")
 ```
 
-<Anchor id="2-set-custom-properties"></Anchor>
+## Set custom properties
 
-##### 2. Set custom properties
-
-You can attach your own metadata to a lobby as custom properties with [GotmLobby.set_property](/docs/api-reference#gotmlobby-set-property).
+You can attach your own metadata to a lobby as custom properties with `GotmLobby.set_property`.
 
 ```
 lobby.set_property("difficulty", "easy")
 lobby.set_property("map", "classic")
 ```
 
-You can now fetch the lobby and see its custom properties by calling [GotmLobby.get_property](/docs/api-reference#gotmlobby-get-property).
+You can now fetch the lobby and see its custom properties by calling `GotmLobby.get_property`.
 
 ```
 var difficulty = lobby.get_property("difficulty")
 var map = lobby.get_property("classic")
 ```
 
-<Anchor id="3-filter"></Anchor>
+## Filter
 
-##### 3. Filter
-
-To only fetch lobbies with a particular difficulty or map, you can make them filterable by calling [GotmLobby.set_filterable](/docs/api-reference#gotmlobby-set-filterable).
+To only fetch lobbies with a particular difficulty or map, you can make them filterable by calling `GotmLobby.set_filterable`.
 
 ```
 lobby.set_filterable("difficulty")
 lobby.set_filterable("map")
 ```
 
-Now you can filter lobbies with [GotmLobbyFetch.filter_properties](/docs/api-reference#gotmlobbyfetch-filter-properties).
+Now you can filter lobbies with `GotmLobbyFetch.filter_properties`.
 For example, fetch lobbies with difficulty `easy` and map `classic` with the following code:
 
 ```
@@ -341,7 +281,7 @@ fetch.filter_properties.difficulty = null
 fetch.filter_properties.map = "classic"
 ```
 
-When using [GotmLobbyFetch.filter_properties](/docs/api-reference#gotmlobbyfetch-filter-properties) you must set every value that was registered with [GotmLobby.set_filterable](/docs/api-reference#gotmlobby-set-filterable).
+When using `GotmLobbyFetch.filter_properties` you must set every value that was registered with `GotmLobby.set_filterable`.
 For example, the following will fail to fetch our lobby because it does not set `map` to any value.
 
 ```
@@ -357,26 +297,24 @@ fetch.filter_properties.difficulty = null
 fetch.filter_properties.map = null
 ```
 
-<Anchor id="4-sort"></Anchor>
-
-##### 4. Sort
+## Sort
 
 By default lobbies are sorted by their creation time in descending order, so newer lobbies appear before older lobbies.
 
-Make your lobby sortable by difficulty with [GotmLobby.set_sortable](/docs/api-reference#gotmlobby-set-sortable).
+Make your lobby sortable by difficulty with `GotmLobby.set_sortable`.
 
 ```
 lobby.set_sortable("difficulty")
 ```
 
-Now you can sort lobbies by setting [GotmLobbyFetch.sort_property](/docs/api-reference#gotmlobbyfetch-sort-property).
+Now you can sort lobbies by setting `GotmLobbyFetch.sort_property`.
 For example, the following sort lobbies by difficulty with the following code:
 
 ```
 fetch.sort_property = "difficulty"
 ```
 
-When using [GotmLobbyFetch.sort_property](/docs/api-reference#gotmlobbyfetch-sort-property) only lobbies that have registered that property with [GotmLobby.set_sortable](/docs/api-reference#gotmlobby-set-sortable) will be fetched.
+When using `GotmLobbyFetch.sort_property` only lobbies that have registered that property with `GotmLobby.set_sortable` will be fetched.
 For example, the following will fail to fetch our lobby because `map` is not registered as sortable.
 
 ```
@@ -389,11 +327,9 @@ Disable sorting by setting it to `""`.
 fetch.sort_property = ""
 ```
 
-<Anchor id="5-search-by-name"></Anchor>
+## Search by name
 
-##### 5. Search by name
-
-You can search lobbies by name with [GotmLobbyFetch.filter_name](/docs/api-reference#gotmlobbyfetch-filter-name).
+You can search lobbies by name with `GotmLobbyFetch.filter_name`.
 
 ```
 fetch.filter_name = "My Test Lobby!"
@@ -414,11 +350,9 @@ Disable name-searching by setting it to `""`.
 fetch.filter_name = ""
 ```
 
-<Anchor id="6-paginate"></Anchor>
+## Paginate
 
-##### 6. Paginate
-
-You can fetch lobbies page-by-page by using [GotmLobbyFetch.next](/docs/api-reference#gotmlobbyfetch-next).
+You can fetch lobbies page-by-page by using `GotmLobbyFetch.next`.
 
 ```
 var lobbies
@@ -432,13 +366,13 @@ lobbies = yield(fetch.next(5), "completed")
 ### And so on...
 ```
 
-You can refresh your current page with [GotmLobbyFetch.current](/docs/api-reference#gotmlobbyfetch-current).
+You can refresh your current page with `GotmLobbyFetch.current`.
 
 ```
 lobbies = yield(fetch.current(5), "completed")
 ```
 
-Modifying any property in [GotmLobbyFetch](/docs/api-reference#gotmlobbyfetch) will reset its state to the first page.
+Modifying any property in `GotmLobbyFetch` will reset its state to the first page.
 
 ```
 ### Page 1
@@ -454,9 +388,7 @@ fetch.name = "abc"
 lobbies = yield(fetch.next(5), "completed")
 ```
 
-<Anchor id="limitations"></Anchor>
-
-#### Limitations
+# Limitations
 
 Gotm provides you the basic building blocks of a lobby system, which gives you much freedom in your own design of your game's lobby experience.
 However, there are some restrictions:

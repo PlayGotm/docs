@@ -8,14 +8,10 @@
 
 Let your players compete against eachother or themselves by adding high scores and leaderboards to your game!
 
-[<button outlined icon="download">
-Download Project
-</button>](https://github.com/PlayGotm/Game-Examples/releases/latest/download/Leaderboards.zip)
-[<button outlined icon="code">
-Browse source
-</button>](https://github.com/PlayGotm/Game-Examples/tree/master/Leaderboards)
+[<button outlined icon="download">Download Project</button>](https://github.com/PlayGotm/Game-Examples/releases/latest/download/Leaderboards.zip)
+[<button outlined icon="code">Browse source</button>](https://github.com/PlayGotm/Game-Examples/tree/master/Leaderboards)
 
-The above game example uses the GDScript plugin to create scores and list them with leaderboads. See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/Leaderboards) for more details.
+The above game example uses [GDGotm](/src/docs/gdgotm.md) to create scores and list them with leaderboads. See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/Leaderboards) for more details.
 
 <include>
 
@@ -23,7 +19,7 @@ The above game example uses the GDScript plugin to create scores and list them w
 
 </include>
 
-## Create scores
+# Create scores
 
 When creating scores, you need to provide two things:
 
@@ -39,11 +35,9 @@ var score2: GotmScore = yield(GotmScore.create(score_name, 2), "completed")
 var score3: GotmScore = yield(GotmScore.create(score_name, 3), "completed")
 ```
 
-Note that scores are only stored locally if you haven't initialized the plugin with a project key.
-
 BETA NOTICE: Scores and leaderboards are currently beta features. See the beta notice at the top of this page for more information.
 
-### User data
+## User data
 
 When you create a score, the current user's id is automatically assigned to the score's `user_id` field. If you create a score while the current user is signed into Gotm, the user id of that score will point to a registered user which you can fetch with [GotmUser](https://github.com/PlayGotm/GDGotm/blob/master/gotm/GotmUser.gd)`.fetch`.
 
@@ -59,7 +53,7 @@ else:
     pass
 ```
 
-## Fetch scores
+# Fetch scores
 
 Scores are fetched with a [GotmLeaderboard](https://github.com/PlayGotm/GDGotm/blob/master/gotm/GotmLeaderboard.gd) instance, which acts as a filter when fetching scores. You do not need to create a leaderboard before creating scores.
 
@@ -75,7 +69,7 @@ Use `get_scores` to fetch up to 20 top scores in descending order (highest value
 var top_scores = yield(top_leaderboard.get_scores(), "completed")
 ```
 
-### Fetch surrounding scores
+## Fetch surrounding scores
 
 Use `get_surrounding_scores` to fetch up to 20 scores above and and 20 below a certain score.
 
@@ -98,7 +92,7 @@ var surrounding_scores_by_value = yield(top_leaderboard.get_surrounding_scores(2
 var surrounding_scores_by_rank = yield(top_leaderboard.get_surrounding_scores_by_rank(2), "completed")
 ```
 
-### Fetch scores after
+## Fetch scores after
 
 Pass a score to `get_scores` to fetch up to 20 scores after that score.
 
@@ -121,7 +115,7 @@ var scores_after_value = yield(top_leaderboard.get_scores(2), "completed")
 var scores_after_rank = yield(top_leaderboard.get_scores_by_rank(1), "completed")
 ```
 
-### Fetch score counts
+## Fetch score counts
 
 Use `get_count` to get the total number of scores that matches the leaderboard.
 
@@ -140,7 +134,7 @@ You can also use `get_counts` to get counts across a range of values, which is u
 var score_counts = yield(top_leaderboard.get_counts(0, 4, 4), "completed")
 ```
 
-### Fetch rank
+## Fetch rank
 
 Use `get_rank` to get the rank of a score. Ranks start at 1, which means that the score with the highest value in a leaderboard has rank 1.
 
@@ -156,7 +150,7 @@ You can also pass a value to get the rank a score would have if it would have th
 var rank_from_value = yield(top_leaderboard.get_rank(2.5), "completed")
 ```
 
-### Invert score order
+## Invert score order
 
 If you want rank 1 to be the score with lowest value instead of the highest value, set the `is_inverted` field to `true` on your `GotmLeaderboard` instance.
 
@@ -168,7 +162,7 @@ var inverted_rank = yield(top_leaderboard.get_rank(score3), "completed")
 var inverted_scores = yield(top_leaderboard.get_scores(), "completed")
 ```
 
-### Rank older scores higher
+## Rank older scores higher
 
 If you want older scores to rank higher than newer scores with the same value, set the `is_oldest_first` field to `true` on your `GotmLeaderboard` instance.
 
@@ -183,7 +177,7 @@ top_leaderboard.is_oldest_first = true
 var score1_copy_rank_with_oldest_first = yield(top_leaderboard.get_rank(score1_copy), "completed")
 ```
 
-## Modify scores
+# Modify scores
 
 Use `update` to update a score.
 
@@ -201,11 +195,11 @@ yield(score2.delete(), "completed")
 yield(top_leaderboard.get_scores(), "completed")
 ```
 
-## Filter scores
+# Filter scores
 
 Gotm provides a powerful way to filter scores in multiple ways with `GotmLeaderboard` by setting any of the `properties`, `is_unique`, `period` or `user_id` fields.
 
-### Filter by properties
+## Filter by properties
 
 Scores have an optional `properties` field where you can store your own metadata. You can also filter scores by these properties.
 
@@ -220,7 +214,7 @@ yield(top_leaderboard.get_scores(), "completed")
 yield(top_leaderboard.get_rank(score1), "completed")
 ```
 
-### Filter by unique per user
+## Filter by unique per user
 
 If the same user creates multiple scores they will all show up in your fetches by default. Use `is_unique` to only fetch the last created score per user.
 
@@ -232,7 +226,7 @@ yield(top_leaderboard.get_scores(), "completed")
 yield(top_leaderboard.get_rank(score3), "completed")
 ```
 
-### Filter by time period
+## Filter by time period
 
 Scores created at any time are included in your fetches by default. Use `period` to only fetch scores that were created within a certain time period.
 
@@ -250,7 +244,7 @@ top_leaderboard.period = GotmPeriod.offset(GotmPeriod.TimeGranularity.DAY, -2)
 top_leaderboard.period = GotmPeriod.at(GotmPeriod.TimeGranularity.MONTH, 2019, 2)
 ```
 
-### Filter by user
+## Filter by user
 
 Scores created from any users are included in your fetches by default. Use `user_id` to only fetch scores that were created by a particular user.
 
@@ -258,11 +252,11 @@ Scores created from any users are included in your fetches by default. Use `user
 top_leaderboard.user_id = "<A_USER_ID>"
 ```
 
-## Manage scores in the dashboard
+# Manage scores in the dashboard
 
 You can easily browse, delete and edit scores in the tools section of [your game's dashboard](/dashboard/_/_?page=tools).
 
-## Reference
+# Reference
 
 - [Gotm](https://github.com/PlayGotm/GDGotm/blob/master/gotm/Gotm.gd)
 - [GotmConfig](https://github.com/PlayGotm/GDGotm/blob/master/gotm/GotmConfig.gd)
