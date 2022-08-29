@@ -5,7 +5,7 @@
 
 </include>
 
-## Create local contents
+# Create local contents
 
 When a player creates a content, they can choose whether they want to store it globally or locally.
 
@@ -21,7 +21,7 @@ var local_content = yield(GotmContent.create_local(), "completed")
 print(local_content.is_local) # Prints true
 ```
 
-## List local contents
+# List local contents
 
 When a player lists contents, they can choose whether they want to use global or local contents.
 

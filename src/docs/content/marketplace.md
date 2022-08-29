@@ -18,7 +18,7 @@ To learn how a game developer can manually add items to the marketplace, see [sh
 
 </include>
 
-## Add a precious gem to the marketplace
+# Add a precious gem to the marketplace
 
 When a player wants to sell a precious gem through the marketplace, they can add it to the marketplace for a desired price and hope that another player buys it. In this case the player wants to sell the gem for 50 coins.
 
@@ -37,7 +37,7 @@ var seller_inventory_key = auth.user_id + "/inventory"
 yield(GotmContent.update_by_key(seller_inventory_key, seller_inventory), "completed")
 ```
 
-## Buy gem from the marketplace
+# Buy gem from the marketplace
 
 When a player wants to buy a gem through the marketplace, they can list all gem sales in the marketplace and buy it for the listed price.
 

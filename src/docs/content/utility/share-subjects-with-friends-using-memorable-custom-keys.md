@@ -1,4 +1,4 @@
-## Share %subject%s with friends using memorable custom keys
+# Share %subject%s with friends using memorable custom keys
 
 A player can easily send their %subject% to their friends by choosing a memorable key for their %subject% instead of using the content's automatically generated identifier.
 

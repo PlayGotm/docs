@@ -20,7 +20,7 @@ To learn how a game developer can manually add items to the auction house, see [
 
 </include>
 
-## Add a precious gem to the auction house
+# Add a precious gem to the auction house
 
 When a player wants to sell a precious gem through the auction house, they can add it to the auction house for a desired price and hope that another player bids on it. In this case the player wants to sell the gem for a starting price of 50 coins.
 
@@ -39,7 +39,7 @@ var seller_inventory_key = auth.user_id + "/inventory"
 yield(GotmContent.update_by_key(seller_inventory_key, seller_inventory), "completed")
 ```
 
-## Bid on gem
+# Bid on gem
 
 When a player wants to bid on a gem through the auction house, they can list all gem sales in the auction house and place a bid above the currently listed price.
 

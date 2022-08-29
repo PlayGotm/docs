@@ -1,4 +1,4 @@
-## Add %subject% to %container%
+# Add %subject% to %container%
 
 %scenario%, they can save a lightweight content identifier instead of the original content data. The content identifier can be used to retrieve the original content data.
 

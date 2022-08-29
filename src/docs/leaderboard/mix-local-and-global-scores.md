@@ -5,7 +5,7 @@
 
 </include>
 
-## Create local scores
+# Create local scores
 
 When a player creates a score, they can choose whether they want to store it globally or locally.
 
@@ -21,7 +21,7 @@ var local_score = yield(GotmScore.create_local("score_name", 1), "completed")
 print(local_score.is_local) # Prints true
 ```
 
-## List local scores
+# List local scores
 
 When a player lists scores or interacts with a leaderboard in general, they can choose whether they want to use global or local scores and leaderboards.
 

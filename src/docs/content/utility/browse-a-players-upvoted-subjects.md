@@ -1,4 +1,4 @@
-## Browse a player's upvoted %subject%s
+# Browse a player's upvoted %subject%s
 
 A player can upvote %subject%s as a way to easily find them again later. Some players are also interested in what %subject%s their friends have upvoted.
 

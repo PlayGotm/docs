@@ -1,4 +1,4 @@
-## Search memorable %subject%s by name
+# Search memorable %subject%s by name
 
 When a player searches for a particular %subject%, they may only remember a part of the %subject%'s name.
 

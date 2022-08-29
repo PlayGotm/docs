@@ -1,4 +1,4 @@
-## Upvote good %subject%s
+# Upvote good %subject%s
 
 A player can share their opinion of the %subject% with other players and the %subject%-creator by upvoting or downvoting it. This allows players to easier find popular %subject%s with many upvotes and avoid unpopular %subject%s with many downvotes.
 

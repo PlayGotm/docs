@@ -26,7 +26,7 @@ Lego Racers and "Gary Gadget: Building Cars" are two games where players can con
 
 </include>
 
-## Group cars in a garage with directories
+# Group cars in a garage with directories
 
 A player can group the cars they have created in a garage by putting them in a directory that is shared with their other cars.
 
@@ -42,7 +42,7 @@ A player can group the cars they have created in a garage by putting them in a d
 
 </include>
 
-## Add car stats with metadata
+# Add car stats with metadata
 
 A player can describe the properties of a car by with the help of lightweight metadata. In this case the player has made a car with a top speed of 50, a weight of 1500 and it takes 5 seconds to accelerate from 0 to 50.
 
@@ -52,7 +52,7 @@ A player can describe the properties of a car by with the help of lightweight me
 
 </include>
 
-## Browse fast cars
+# Browse fast cars
 
 A player can browse cars based on car stats. In this case a player is interested in fast cars with a top speed of at least 100.
 

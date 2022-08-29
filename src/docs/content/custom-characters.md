@@ -28,7 +28,7 @@ How much control a player has in customizing their character can range from just
 
 </include>
 
-## Group characters by class with directories
+# Group characters by class with directories
 
 A player can group their characters by class by putting them in a directory that is shared with their other characters of the same class.
 
@@ -44,7 +44,7 @@ A player can group their characters by class by putting them in a directory that
 
 </include>
 
-## Add character stats with metadata
+# Add character stats with metadata
 
 A player can describe the properties their character with the help of lightweight metadata. In this case the player has made a blue-haired wizard character with a high intellect of 100 but weak strength of 5.
 
@@ -54,7 +54,7 @@ A player can describe the properties their character with the help of lightweigh
 
 </include>
 
-## Browse strong characters
+# Browse strong characters
 
 A player can browse characters based on character stats. In this case a player is interested in strong characters with strength of at least 100.
 

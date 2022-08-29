@@ -1,4 +1,4 @@
-## Load %subject%
+# Load %subject%
 
 When a player wants to play an existing %subject% that is stored in a content, they can load it from the content.
 

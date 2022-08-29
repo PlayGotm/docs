@@ -10,7 +10,7 @@ This example shows how to make an inventory in Godot by using an array. The inve
 
 </include>
 
-## Save inventory
+# Save inventory
 
 A player can save their inventory as any Godot object. They can then load the inventory later when restarting the game.
 
@@ -21,7 +21,7 @@ var content = yield(GotmContent.create(inventory), "completed")
 
 <gdscript>
 
-## Save inventory locally
+# Save inventory locally
 
 If a player's inventory doesn't need to be accessible to other players or devices, they can save it locally to their own device. They can then load the inventory later when restarting the game on the same device.
 
@@ -32,7 +32,7 @@ var content = yield(GotmContent.create_local(inventory), "completed")
 
 </gdscript>
 
-## Hide inventory from other players
+# Hide inventory from other players
 
 If a player's inventory shouldn't be accessible to other players, but needs to be accessible to other devices, the player can save it as a private content.
 
@@ -42,7 +42,7 @@ var is_private = true
 var content = yield(GotmContent.create(inventory, "", {}, "", is_private), "completed")
 ```
 
-## Load inventory
+# Load inventory
 
 A player can load their inventory from the content.
 
@@ -50,7 +50,7 @@ A player can load their inventory from the content.
 var inventory = yield(GotmContent.get_variant(content), "completed")
 ```
 
-## Save inventory using custom key
+# Save inventory using custom key
 
 A player can use a custom unique key when saving their inventory instead of using the content's automatically generated identifier.
 
@@ -71,7 +71,7 @@ var shared_inventory = yield(GotmContent.get_node_by_key(key), "completed")
 
 </include>
 
-## Add sword
+# Add sword
 
 A player can add a sword to their inventory by appending it to the array.
 
@@ -82,7 +82,7 @@ inventory.append("sword")
 yield(GotmContent.update_by_key(key, inventory), "completed")
 ```
 
-## Remove sword
+# Remove sword
 
 A player can remove a sword to their inventory by erasing it from the array.
 
@@ -93,7 +93,7 @@ inventory.erase("sword")
 yield(GotmContent.update_by_key(key, inventory), "completed")
 ```
 
-## Add coin stacks
+# Add coin stacks
 
 A player can add coin stacks to their inventory. A coin stack is an item that can hold more than one coin. If a player already has a coin stack in their inventory, the new coin stack is merged with the existing one. If a player doesn't have a coin stack already, the coin stack is added without the need of merging.
 
@@ -118,7 +118,7 @@ else:
 yield(GotmContent.update_by_key(key, inventory), "completed")
 ```
 
-## Inspect player inventory
+# Inspect player inventory
 
 A player can inspect a particular player's inventory by combining the key with the player's user id.
 
@@ -133,7 +133,7 @@ var content = yield(GotmContent.create(custom_item, key), "completed")
 var inspected_inventory = yield(GotmContent.get_variant_by_key(key), "completed")
 ```
 
-## Limit inventory size
+# Limit inventory size
 
 How many items a player's inventory can contain can be limited.
 
@@ -145,12 +145,12 @@ var inventory = yield(GotmContent.get_variant_by_key(key), "completed")
 # Don't add the item if the inventory is full
 if inventory.size() >= size_limit:
     return
-## Add the item
+# Add the item
 inventory.append(item)
 yield(GotmContent.update_by_key(key, inventory), "completed")
 ```
 
-## Limit inventory weight
+# Limit inventory weight
 
 How much weight a player's inventory can hold can be limited.
 
@@ -168,7 +168,7 @@ for item in inventory:
 # Don't add the item if the inventory will weigh too much
 if inventory_weight + item.weight > weight_limit:
     return
-## Add the item
+# Add the item
 inventory.append(item)
 yield(GotmContent.update_by_key(key, inventory), "completed")
 ```

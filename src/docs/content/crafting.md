@@ -12,7 +12,7 @@ This example shows how to do crafting in Godot by storing the recipes and the pl
 
 </include>
 
-## Craft an iron axe
+# Craft an iron axe
 
 A player can craft an iron axe from wood and iron.
 
@@ -37,7 +37,7 @@ for ingredient in recipe.ingredients:
 yield(GotmContent.update_by_key(inventory_key, "inventory"), "completed")
 ```
 
-## Create a recipe without updating the game
+# Create a recipe without updating the game
 
 A game developer can add new recipes without updating the game. This example shows how to add a recipe that lets a player craft an axe from a piece of wood and an iron nugget. When the recipe is created it will be immediately accessible to all players.
 
@@ -57,7 +57,7 @@ A game developer can add new recipes without updating the game. This example sho
 
 5. Click the Save button.
 
-## Change a recipe without updating the game
+# Change a recipe without updating the game
 
 A game developer can update existing recipes without updating the game. This example shows how to change the iron axe recipe to only require an iron nugget. When the recipe is updated it will be immediately updated for all players.
 
@@ -75,7 +75,7 @@ A game developer can update existing recipes without updating the game. This exa
 
 6. Click the Save button.
 
-## Remove a recipe without updating the game
+# Remove a recipe without updating the game
 
 A game developer can delete existing recipes without updating the game. This example shows how to delete the iron axe recipe. When the recipe is deleted it will immediately no longer be accessible to any player.
 
@@ -85,7 +85,7 @@ A game developer can delete existing recipes without updating the game. This exa
 1. Click the Get button.
 1. Click the Delete button.
 
-## Get recipe by key
+# Get recipe by key
 
 A player can get a specific recipe by using the key the game developer used when creating the recipe. This example shows how to get the iron axe recipe.
 
@@ -94,7 +94,7 @@ A player can get a specific recipe by using the key the game developer used when
 var ingredients = yield(GotmContent.get_properties_by_key("recipes/iron_axe"), "completed")
 ```
 
-## List all recipes
+# List all recipes
 
 A player can explore all possible recipes by listing all contents in the "recipes" directory.
 
@@ -110,7 +110,7 @@ var ingredients = first_20_recipes[0].properties
 var second_20_recipes = yield(GotmContent.list(query, first_20_recipes.back()), "completed")
 ```
 
-## List all recipes with a certain ingredient
+# List all recipes with a certain ingredient
 
 When a player wants to know what they can do with a certain ingredient they have found, they can list all recipes that require that ingredient. This example shows how to list all recipes that require a piece of wood, which in this case is the iron axe recipe.
 
@@ -124,7 +124,7 @@ var ingredients = first_20_recipes[0].properties
 var second_20_recipes = yield(GotmContent.list(query, first_20_recipes.back()), "completed")
 ```
 
-## Search recipe by name
+# Search recipe by name
 
 When a player wants to look up a recipe, they can easily find it by searching for its name. In this example the player searches for "iro", which matches "Iron axe".
 

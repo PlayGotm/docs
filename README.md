@@ -2,11 +2,11 @@
 
 This repository contains the source material for the [official documentation for Gotm](https://gotm.io/docs). Anyone may improve or add to the documentation by creating a [pull request](https://github.com/PlayGotm/docs/pulls) or by reporting an [issue](https://github.com/PlayGotm/docs/issues).
 
-## Report
+# Report
 
 If you find something that could be improved but don't have the means to do it yourself, please create an [issue](https://github.com/PlayGotm/docs/issues).
 
-## Contribute
+# Contribute
 
 You can contribute to this repository by creating a [pull request](https://github.com/PlayGotm/docs/pulls) containing your changes.
 
@@ -16,11 +16,11 @@ For example, the "game" article explains what a game on Gotm is. The article's c
 
 The source files are written in [Markdown](https://gotm.io/docs/markdown). You can preview Markdown while editing a source file on GitHub, in a [Markdown online editor](https://marked.js.org/demo/?version=master), or via your preferred text editor. Please keep in mind that [Gotm renders the Markdown differently](https://gotm.io/docs/markdown) from the previewers.
 
-### Adding a new article or chapter to the side menu
+## Adding a new article or chapter to the side menu
 
 When you have created a new article or chapter, it should probably appear in the [side menu on Gotm](https://gotm.io/docs). To make this happen, you need to add your article or chapter to the [menu's source file](/src/menu.md?plain=1). See the menu's source file for more guidance.
 
-## Help wanted 🙏
+# Help wanted 🙏
 
 The table below shows unwritten articles and chapters that are needed to make the documentation more complete.
 
@@ -80,11 +80,11 @@ The table below lists documentation that is intended to be created by Gotm staff
 | Pricing            |                          | Explain how Gotm's fees, pricing and revenue share model works in detail, and how it compares to other platforms. |
 | Web player         |                          | Explain what the web player is and what you can do in it.                                                         |
 
-## Tips for writing good documentation
+# Tips for writing good documentation
 
 Writing good documentation that the reader can easily understand, search and navigate is hard. Here are some tips that may help you write good documentation.
 
-### Guidelines
+## Guidelines
 
 The documentation in this repository follows a set of guidelines that should be followed.
 
@@ -92,7 +92,7 @@ The documentation in this repository follows a set of guidelines that should be 
 - Use "and" instead of "&".
 - Capitalize words in a title as you would in a normal sentence. For example, capitalize your title like "How to make a Godot game" instead of "How to Make a Godot Game".
 
-### The five Ws
+## The five Ws
 
 Depending on the particular topic, the documentation on Gotm is targeted towards multiple types of readers, for example game developers, players, asset creators, streamers, social media influencers, and so on.
 

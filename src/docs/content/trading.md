@@ -10,7 +10,7 @@ Normally, trading requires both parties to be present and nearby. This makes tra
 
 This example shows how to do trading in Godot by storing the [inventories](./inventory.md) of the two trading parties in [Gotm contents](/src/docs/content.md).
 
-## Trade a sword for coins (single-player)
+# Trade a sword for coins (single-player)
 
 A player can trade their sword for new items or coins with a non-player characters. In this case a player trades their sword for a coin with the town merchant.
 
@@ -33,7 +33,7 @@ yield(GotmContent.update_by_key(my_inventory_key, my_inventory), "completed")
 yield(GotmContent.update_by_key(merchant_inventory_key, merchant_inventory), "completed")
 ```
 
-## Trade a sword for coins (multi-player)
+# Trade a sword for coins (multi-player)
 
 When a player wants to trade their sword for new items or coins with another player, both players have to be present at the same time because a player isn't allowed to modify another player's inventory for security reasons. In this case a player trades their sword for a coin with another player.
 

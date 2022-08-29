@@ -1,4 +1,4 @@
-## Browse %subject%s by a player
+# Browse %subject%s by a player
 
 When a player wants to browse %subject%s made by a particular player, they can use that player's unique identifier.
 

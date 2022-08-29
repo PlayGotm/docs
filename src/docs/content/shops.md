@@ -16,7 +16,7 @@ This example shows how to make a shop in Godot by storing the player's [inventor
 
 </include>
 
-## Buy a sword with coins
+# Buy a sword with coins
 
 A player can buy a sword from a shop by spending coins.
 
@@ -42,7 +42,7 @@ var inventory_key = auth.user_id + "/inventory"
 yield(GotmContent.update_by_key(inventory_key, inventory), "completed")
 ```
 
-## Sort items by price
+# Sort items by price
 
 When a player wants to look at the cheapest items in a shop, they can sort the shop's items by price so that the cheapest items come first. In this case, the shop's items are stored in separate contents so that they can be listed in a more flexible way.
 
@@ -54,7 +54,7 @@ var sword_contents = yield(GotmContent.list(query), "completed")
 var sword = sword_contents[0].properties
 ```
 
-## Add a sword to the shop without updating the game
+# Add a sword to the shop without updating the game
 
 A game developer can add new items to the shop without updating the game. This example shows how to add a sword. When the sword is added it will be immediately accessible to all players.
 
@@ -73,7 +73,7 @@ A game developer can add new items to the shop without updating the game. This e
 
 6. Click the Save button.
 
-## Remove a sword from the shop without updating the game
+# Remove a sword from the shop without updating the game
 
 A game developer can delete existing recipes without updating the game. This example shows how to delete the iron axe recipe. When the recipe is deleted it will immediately no longer be accessible to any player.
 
@@ -83,7 +83,7 @@ A game developer can delete existing recipes without updating the game. This exa
 1. Click the Get button.
 1. Click the Delete button.
 
-## Search items by name
+# Search items by name
 
 When a player wants to look up an item in a big shop with many items, they can easily find it by searching for its name. In this example the player searches for "swo", which matches "Sword".
 
@@ -95,7 +95,7 @@ var sword_contents = yield(GotmContent.list(query), "completed")
 var sword = sword_contents[0].properties
 ```
 
-## Exclude expensive items
+# Exclude expensive items
 
 When a player is searching for swords in the shop, they can exclude expensive swords from their search. In this case the player is only interested in swords that cost less than 100 coins.
 

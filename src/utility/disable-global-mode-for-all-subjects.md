@@ -1,4 +1,4 @@
-## Disable global mode for all %subject%s
+# Disable global mode for all %subject%s
 
 When you enable [global mode](/src/docs/gdgotm.md#global-mode-for-online-or-multi-player-games), all newly created %subject%s are made global.
 

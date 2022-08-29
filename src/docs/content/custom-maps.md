@@ -25,7 +25,7 @@ Custom maps can also give players the creative freedom to create their own gamep
 
 </include>
 
-## Group forest-themed maps in the same directory
+# Group forest-themed maps in the same directory
 
 When multiple custom maps share the same forest theme or are variations of the same existing map, a player can put their custom map in a directory that is shared with other maps.
 
@@ -47,7 +47,7 @@ var forest_map = yield(GotmContent.get_node(related_contents[0]), "completed")
 
 </include>
 
-## Preview a heavy map without loading it
+# Preview a heavy map without loading it
 
 A custom map can be big and expensive to download or load from local storage. Before a player decides to play a heavy map, they can read the content's lightweight metadata to learn more about a map without loading the map.
 
@@ -57,7 +57,7 @@ A custom map can be big and expensive to download or load from local storage. Be
 
 </include>
 
-## Browse forest maps with many trees
+# Browse forest maps with many trees
 
 If a player knows what kind of maps they like, they can explore new maps by using content metadata to filter and order maps. In this case the player wants to play map with at least 20 trees.
 
