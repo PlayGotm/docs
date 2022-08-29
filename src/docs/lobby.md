@@ -12,10 +12,8 @@
 
 Try it out!
 
-<HorizontalList>
-  <Game src="game-examples/lobbies" />
-  <Game src="game-examples/lobbies" />
-</HorizontalList>
+<game src="game-examples/lobbies">[](/game-examples/lobbies)</game>
+<game src="game-examples/lobbies">[](/game-examples/lobbies)</game>
 
 _Host a lobby in one screen and refresh the list in the other screen. Click "Join" on the listed lobby to join it._
 
