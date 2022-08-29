@@ -2,6 +2,8 @@
 
 A player can upvote %subject%s as a way to easily find them again later. Some players are also interested in what %subject%s their friends have upvoted.
 
+###### Get %subject%s upvoted by user
+
 ```gdscript
 var auth = yield(GotmAuth.fetch(), "completed")
 var my_user_id = auth.user_id

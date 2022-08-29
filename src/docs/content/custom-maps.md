@@ -29,6 +29,8 @@ Custom maps can also give players the creative freedom to create their own gamep
 
 When multiple custom maps share the same forest theme or are variations of the same existing map, a player can put their custom map in a directory that is shared with other maps.
 
+###### Get maps by directory
+
 ```gdscript
 # Save our map with a file-path-like key
 var key = "forest_maps/my_map"

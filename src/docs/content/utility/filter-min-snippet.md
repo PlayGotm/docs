@@ -1,3 +1,5 @@
+###### Filter %subject%s by %prop% range
+
 ```gdscript
 var query = GotmQuery.new()
 query.filter_min("properties/%prop%", %value%)

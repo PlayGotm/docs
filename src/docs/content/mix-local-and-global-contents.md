@@ -9,11 +9,15 @@
 
 When a player creates a content, they can choose whether they want to store it globally or locally.
 
+###### Create global content
+
 ```gdscript
 # Create global content
 var global_content = yield(GotmContent.create(), "completed")
 print(global_content.is_local) # Prints false
 ```
+
+###### Create local content
 
 ```gdscript
 # Create local content
@@ -25,11 +29,15 @@ print(local_content.is_local) # Prints true
 
 When a player lists contents, they can choose whether they want to use global or local contents.
 
+###### List global content
+
 ```gdscript
 # Use global content
 var global_query = GotmQuery.new()
 var global_contents = yield(GotmContent.list(global_query), "completed")
 ```
+
+###### List local content
 
 ```gdscript
 # Use local content

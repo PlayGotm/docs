@@ -2,6 +2,8 @@
 
 A player can share their opinion of the %subject% with other players and the %subject%-creator by upvoting or downvoting it. This allows players to easier find popular %subject%s with many upvotes and avoid unpopular %subject%s with many downvotes.
 
+###### Mark %subject%s with upvotes and downvotes
+
 ```gdscript
 # Create votes
 var upvote_mark = yield(GotmMark.create(content, "upvote"), "completed")

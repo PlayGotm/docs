@@ -2,6 +2,8 @@
 
 When a player wants to browse %subject%s made by a particular player, they can use that player's unique identifier.
 
+###### Get %subject%s by a player
+
 ```gdscript
 var auth = yield(GotmAuth.fetch(), "completed")
 var my_user_id = auth.user_id

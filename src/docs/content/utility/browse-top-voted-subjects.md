@@ -2,6 +2,8 @@
 
 Some players are only interested in the most popular %subject%s and would like to browse %subject%s with many upvotes and few downvotes.
 
+###### Get top voted %subject%s
+
 ```gdscript
 var query = GotmQuery.new()
 query.sort("score")

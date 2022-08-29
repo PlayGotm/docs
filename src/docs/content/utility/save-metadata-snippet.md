@@ -1,3 +1,5 @@
+###### Add custom metadata to %subject%
+
 ```gdscript
 # Save our %subject% with custom metadata
 var %subject% = get_node("%subject%")

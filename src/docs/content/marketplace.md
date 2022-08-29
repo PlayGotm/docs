@@ -22,6 +22,8 @@ To learn how a game developer can manually add items to the marketplace, see [sh
 
 When a player wants to sell a precious gem through the marketplace, they can add it to the marketplace for a desired price and hope that another player buys it. In this case the player wants to sell the gem for 50 coins.
 
+###### Move gem from inventory to marketplace
+
 ```gdscript
 # Define seller's inventory
 var seller_inventory = ["gem"]
@@ -44,6 +46,8 @@ When a player wants to buy a gem through the marketplace, they can list all gem 
 When buying the gem, the buyer cannot send their coins directly to the seller because they are not allowed to modify another player's inventory for security reasons.
 
 Instead, the buyer stores the receipt of the purchase in a new content as a child to the gem sale. When the seller sees the receipt, they add the coins to their own inventory and remove the gem sale. Because the buyer created the receipt as a child to the gem sale, the receipt is automatically removed when the gem sale is removed.
+
+###### Buy gem and create receipt
 
 ```gdscript
 # Define buyer's inventory
@@ -75,6 +79,8 @@ yield(GotmContent.update_by_key(buyer_inventory_key, buyer_inventory), "complete
 ```
 
 Later on, when the buyer checks if they have sold anything, they can list the receipts.
+
+###### Cash in receipts
 
 ```gdscript
 # Define seller's inventory

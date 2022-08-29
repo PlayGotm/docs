@@ -2,6 +2,8 @@
 
 %scenario%, they can save a lightweight content identifier instead of the original content data. The content identifier can be used to retrieve the original content data.
 
+###### Add content identifier to %container%
+
 ```gdscript
 # Save %subject% to our %container%
 var %container% = []

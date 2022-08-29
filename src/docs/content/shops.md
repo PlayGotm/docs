@@ -20,6 +20,8 @@ This example shows how to make a shop in Godot by storing the player's [inventor
 
 A player can buy a sword from a shop by spending coins.
 
+###### Trade coin stack for sword
+
 ```gdscript
 # Define the shop's inventory
 var shop_inventory = []
@@ -45,6 +47,8 @@ yield(GotmContent.update_by_key(inventory_key, inventory), "completed")
 # Sort items by price
 
 When a player wants to look at the cheapest items in a shop, they can sort the shop's items by price so that the cheapest items come first. In this case, the shop's items are stored in separate contents so that they can be listed in a more flexible way.
+
+###### Get items by price
 
 ```gdscript
 var query = Query.new()
@@ -87,6 +91,8 @@ A game developer can delete existing recipes without updating the game. This exa
 
 When a player wants to look up an item in a big shop with many items, they can easily find it by searching for its name. In this example the player searches for "swo", which matches "Sword".
 
+###### Search items
+
 ```gdscript
 var query = Query.new()
 query.filter("name_part", "swo")
@@ -98,6 +104,8 @@ var sword = sword_contents[0].properties
 # Exclude expensive items
 
 When a player is searching for swords in the shop, they can exclude expensive swords from their search. In this case the player is only interested in swords that cost less than 100 coins.
+
+###### Filter items by price range
 
 ```gdscript
 var query = GotmQuery.new()

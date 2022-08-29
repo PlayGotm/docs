@@ -24,6 +24,8 @@ To learn how a game developer can manually add items to the auction house, see [
 
 When a player wants to sell a precious gem through the auction house, they can add it to the auction house for a desired price and hope that another player bids on it. In this case the player wants to sell the gem for a starting price of 50 coins.
 
+###### Move gem from inventory to auction house
+
 ```gdscript
 # Define seller's inventory
 var seller_inventory = ["gem"]
@@ -49,6 +51,8 @@ Instead, the buyer stores the bid in a new content. When the seller wants to end
 
 The seller also informs the bidders who won the auction by creating a child content for each bid. When the buyer sees the auction result they add the gem to their inventory and removes the bid. Because the auction result is a child to the bid, it is automatically removed when the bid is removed.
 
+###### Create bid for gem
+
 ```gdscript
 # Define buyer's inventory
 var buyer_inventory = []
@@ -73,6 +77,8 @@ yield(GotmContent.create(null, "", bid), "completed")
 ```
 
 When the seller ends the auction, they can inform the highest bidder that they won.
+
+###### Broadcast auction result to bidders
 
 ```gdscript
 # Get the seller's oldest gem sale
@@ -107,6 +113,8 @@ for i in range(0, bid_contents.size()):
 ```
 
 Finally, when the buyer wants to know if they won the auction, they can list the auction result created by the seller.
+
+###### Get auction result
 
 ```gdscript
 # Define the buyer's inventory

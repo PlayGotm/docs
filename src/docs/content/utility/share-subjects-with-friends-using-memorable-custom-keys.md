@@ -2,6 +2,8 @@
 
 A player can easily send their %subject% to their friends by choosing a memorable key for their %subject% instead of using the content's automatically generated identifier.
 
+###### Create %subject% with key
+
 ```gdscript
 # Save our %subject% with a key
 var key = "awesome_%subject%_by_sam"

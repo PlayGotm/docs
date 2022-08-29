@@ -1,3 +1,5 @@
+###### Get %subject%s by directory
+
 ```gdscript
 # Save our %subject% with a file-path-like key
 var key = "%directory%/my_%subject%"

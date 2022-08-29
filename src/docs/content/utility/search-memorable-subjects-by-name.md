@@ -2,6 +2,8 @@
 
 When a player searches for a particular %subject%, they may only remember a part of the %subject%'s name.
 
+###### Search %subject%s
+
 ```gdscript
 # Save our %subject% with a searchable name
 var %subject% = get_node("%subject%")

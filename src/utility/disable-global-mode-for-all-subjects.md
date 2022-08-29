@@ -6,6 +6,8 @@ When you enable [global mode](/src/docs/gdgotm.md#global-mode-for-online-or-mult
 
 If you want all %subject%s to be stored locally instead, you can disable global mode for %subject%s when [initializing the plugin](/src/docs/gdgotm.md#initialize).
 
+###### Disable global mode for %subject%s
+
 ```gdscript
 var config = GotmConfig.new()
 config.force_local_%subject%s = true

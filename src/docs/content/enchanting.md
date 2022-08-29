@@ -10,6 +10,8 @@ This example shows how to do crafting in Godot by storing the recipes and the pl
 
 A player can enchant their sword with fire to make the sword inflict extra fire damage on enemies.
 
+###### Enchant sword with fire
+
 ```gdscript
 # Define the recipe and inventory
 var recipe = {}
@@ -109,6 +111,8 @@ A game developer can delete existing recipes without updating the game. This exa
 
 A player can get a specific recipe by using the key the game developer used when creating the recipe. This example shows how to get the iron axe recipe.
 
+###### Get iron axe recipe by key
+
 ```gdscript
 var recipe = yield(GotmContent.get_properties_by_key("recipes/iron_axe"), "completed")
 var ingredients = recipe.ingredients # Is {"sword": true, "fire": true}
@@ -118,6 +122,8 @@ var effects = recipe.effects # Is {"fire_damage": 10}
 # List all recipes
 
 A player can explore all possible recipes by listing all contents in the "recipes" directory.
+
+###### Get recipes by directory
 
 ```gdscript
 # Get all contents whose keys start with "recipes/", sorted by name.
@@ -136,6 +142,8 @@ var second_20_recipes = yield(GotmContent.list(query, first_20_recipes.back()), 
 
 When a player wants to know what they can do with a certain ingredient they have found, they can list all recipes that require that ingredient. This example shows how to list all recipes that require fire, which in this case is the fire damage recipe.
 
+###### Get recipes by ingredient
+
 ```gdscript
 var query = Query.new()
 query.filter("properties/ingredients/fire", true)
@@ -150,6 +158,8 @@ var second_20_recipes = yield(GotmContent.list(query, first_20_recipes.back()), 
 # Search recipe by name
 
 When a player wants to look up a recipe, they can easily find it by searching for its name. In this example the player searches for "fir", which matches "Fire damage".
+
+###### Search recipes
 
 ```gdscript
 var query = Query.new()

@@ -14,6 +14,8 @@ This example shows how to do trading in Godot by storing the [inventories](./inv
 
 A player can trade their sword for new items or coins with a non-player characters. In this case a player trades their sword for a coin with the town merchant.
 
+###### Move sword and coins between inventories (single-player)
+
 ```gdscript
 # Check if we have a sword and they have a coin
 var auth = yield(GotmAuth.fetch(), "completed")
@@ -36,6 +38,8 @@ yield(GotmContent.update_by_key(merchant_inventory_key, merchant_inventory), "co
 # Trade a sword for coins (multi-player)
 
 When a player wants to trade their sword for new items or coins with another player, both players have to be present at the same time because a player isn't allowed to modify another player's inventory for security reasons. In this case a player trades their sword for a coin with another player.
+
+###### Move sword and coins between inventories (single-player)
 
 ```gdscript
 # Check if we have a sword and they have a coin
