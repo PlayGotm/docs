@@ -12,25 +12,13 @@
 
 Try it out!
 
-<game src="game-examples/lobbies">[](/game-examples/lobbies)</game>
-<game src="game-examples/lobbies">[](/game-examples/lobbies)</game>
+<game>[](/game-examples/lobbies)</game>
+<game>[](/game-examples/lobbies)</game>
 
 _Host a lobby in one screen and refresh the list in the other screen. Click "Join" on the listed lobby to join it._
 
-<HorizontalList>
-  <ExternalLink href="https://github.com/PlayGotm/Game-Examples/releases/latest/download/Lobbies.-.Host.and.join.zip">
-    <OutlinedButton padding="10px" margin="10px">
-      <FiDownload size="24px" />
-      <span>Download project</span>
-    </OutlinedButton>
-  </ExternalLink>
-  <ExternalLink href="https://github.com/PlayGotm/Game-Examples/tree/master/Lobbies%20-%20Host%20and%20join">
-    <OutlinedButton padding="10px" margin="10px">
-      <FiCode size="24px" />
-      <span>Browse source</span>
-    </OutlinedButton>
-  </ExternalLink>
-</HorizontalList>
+[<button outlined icon="download">Download Project</button>](https://github.com/PlayGotm/Game-Examples/releases/latest/download/Lobbies.-.Host.and.join.zip)
+[<button outlined icon="code">Browse source</button>](https://github.com/PlayGotm/Game-Examples/tree/master/Lobbies%20-%20Host%20and%20join)
 
 The above game example uses GDGotm and [NetworkedMultiplayerENet](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html) to connect players in a shared drawing session.
 See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/Lobbies%20-%20Host%20and%20join) for more details.
@@ -123,24 +111,12 @@ peer.create_client(Gotm.lobby.host.address, 8070)
 [GDGotm](/src/docs/gdgotm.md) gives you access to Gotm's powerful lobby system that lets you fetch lobbies with custom filters and sorting.
 Try it out!
 
-<Game src="game-examples/lobbies-fetch" />
+<game>[](/game-examples/lobbies-fetch)</game>
 
 _You can filter and sort your lobbies any way you want with custom properties._
 
-<HorizontalList>
-  <ExternalLink href="https://github.com/PlayGotm/Game-Examples/releases/latest/download/Lobbies.-.Fetch.zip">
-    <OutlinedButton padding="10px" margin="10px">
-      <FiDownload size="24px" />
-      <span>Download project</span>
-    </OutlinedButton>
-  </ExternalLink>
-  <ExternalLink href="https://github.com/PlayGotm/Game-Examples/tree/master/Lobbies%20-%20Fetch">
-    <OutlinedButton padding="10px" margin="10px">
-      <FiCode size="24px" />
-      <span>Browse source</span>
-    </OutlinedButton>
-  </ExternalLink>
-</HorizontalList>
+[<button outlined icon="download">Download Project</button>](https://github.com/PlayGotm/Game-Examples/releases/latest/download/Lobbies.-.Fetch.zip)
+[<button outlined icon="code">Browse source</button>](https://github.com/PlayGotm/Game-Examples/tree/master/Lobbies%20-%20Fetch)
 
 The above game example uses the [GDGotm](/src/docs/gdgotm.md) to fetch existing lobbies with custom properties.
 It fetches lobbies depending on its map, difficulty and name.
