@@ -43,7 +43,7 @@ The [web player](/web-player) is recommended for testing your game on Gotm witho
 When you call [NetworkedMultiplayerENet.create_server](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html#class-networkedmultiplayerenet-method-create-server) or [PacketPeerUDP.listen](https://docs.godotengine.org/en/stable/classes/class_packetpeerudp.html#class-packetpeerudp-method-listen) Gotm automatically generates an invitation link.
 The link is shown in a popup, so it can easily be copied and shared with other players.
 
-```
+```gdscript
 var peer = NetworkedMultiplayerENet.new()
 peer.create_server(8070)
 get_tree().set_network_peer(peer)
@@ -54,7 +54,7 @@ get_tree().set_network_peer(peer)
 Accept the invitation by entering the link in another browser window.
 You can now connect to the host using [NetworkedMultiplayerENet.create_client](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html#class-networkedmultiplayerenet-method-create-server) or with your custom PacketPeerUDP code.
 
-```
+```gdscript
 var peer = NetworkedMultiplayerENet.new()
 peer.create_client("127.0.0.1", 8070)
 get_tree().set_network_peer(peer)
@@ -67,14 +67,14 @@ This allows your game to send and receive RPC commands and packets to these play
 
 The easiest way to connect to the host is by using the special `127.0.0.1` address:
 
-```
+```gdscript
 var peer = NetworkedMultiplayerENet.new()
 peer.create_client("127.0.0.1", 8070)
 ```
 
 This address always points to the player that created the invitation link. If you want to manually discover hosts with custom PacketPeerUDP broadcasting, that works too:
 
-```
+```gdscript
 var peer = PacketPeerUDP.new()
 peer.set_broadcast_enabled(true) ### Only needed for 3.2 or later.
 peer.set_dest_address("255.255.255.255", 8070)

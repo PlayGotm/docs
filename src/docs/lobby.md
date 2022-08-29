@@ -50,27 +50,27 @@ To test it across networks, use the [web player](/web-player).
 
 Call [Gotm.host_lobby](/docs/api-reference#gotm-host-lobby) to host a lobby.
 
-```
+```gdscript
 ### Suppress invitation popup with 'false'.
 Gotm.host_lobby(false)
 ```
 
 You can now change its name and other properties by accessing it at [Gotm.lobby](/docs/api-reference#gotm-lobby).
 
-```
+```gdscript
 Gotm.lobby.name = "My Lobby!"
 ```
 
 Lobbies are hidden from fetch results by default. Make your lobby visible by setting its [hidden](/docs/api-reference#gotmlobby-hidden) property to `false`.
 
-```
+```gdscript
 Gotm.lobby.hidden = false
 ```
 
 If your game uses networked multiplayer, you are now ready to run your game's server startup code.
 Here is an example using NetworkedMultiplayerENet.
 
-```
+```gdscript
 var peer = NetworkedMultiplayerENet.new()
 peer.create_server(8070)
 ```
@@ -80,7 +80,7 @@ peer.create_server(8070)
 Before you can join the lobby you must fetch it by calling [GotmLobbyFetch.first](/docs/api-reference#gotmlobbyfetch-first).
 This call is asynchronous, which means that you must use [yield](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html?#coroutines-with-yield) to retrieve its return value.
 
-```
+```gdscript
 var fetch = GotmLobbyFetch.new()
 var lobbies = yield(fetch.first(), "completed")
 ```
@@ -92,7 +92,7 @@ If your lobby is not fetched, make sure you set its [hidden](/docs/api-reference
 Using the lobbies fetched in the previous step, you can join the lobby using [GotmLobby.join](/docs/api-reference#gotmlobby-join).
 This call is asynchronous, which means that you must use [yield](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html?#coroutines-with-yield) to retrieve its return value.
 
-```
+```gdscript
 var lobby = lobbies[0]
 var success = yield(lobby.join(), "completed")
 ```
@@ -101,7 +101,7 @@ You have now joined the lobby and are able to communicate with other peers in it
 If your game uses networked multiplayer, you are now ready to connect to the [GotmUser.address](/docs/api-reference#gotmuser-address) of [GotmLobby.host](/docs/api-reference#gotmlobby-host).
 Here is an example using NetworkedMultiplayerENet.
 
-```
+```gdscript
 var peer = NetworkedMultiplayerENet.new()
 peer.create_client(Gotm.lobby.host.address, 8070)
 ```
@@ -143,7 +143,7 @@ See the [example project](/game-examples/lobbies-fetch) for a live lobby browser
 
 `GotmLobbyFetch` provides stateful pagination out-of-the-box. It can fetch lobbies page-by-page both forwards and backwards.
 
-```
+```gdscript
 var fetch = GotmLobbyFetch.new()
 var lobbies
 
@@ -161,7 +161,7 @@ lobbies = yield(fetch.next(5), "completed")
 Let your players join a lobby without browsing or searching in a lobby browser.
 With quick-joining you could present your players with a simple "Play" button that automatically joins the lobby with most players.
 
-```
+```gdscript
 func quick_join():
   var fetch = GotmLobbyFetch.new()
   fetch.sort_property = "player_count"
@@ -178,7 +178,7 @@ Give your players the illusion of always-running dedicated servers!
 With global lobbies you gather your players in a limited set of lobbies with preset modes, such as `deathmatch`, `free for all` and `king of the hill`.
 You then present your players with a button for each mode. When pressed, join the matching lobby or host one if it doesn't exist.
 
-```
+```gdscript
 func join_global_lobby(mode):
   var fetch = GotmLobbyFetch.new()
   fetch.filter_properties.mode = mode
@@ -198,7 +198,7 @@ Match players based on their rank by limiting the fetched lobbies to a rank rang
 
 Keep widening the range until a match is found.
 
-```
+```gdscript
 func do_matchmaking(rank):
   var fetch = GotmLobbyFetch.new()
   fetch.sort_property = "rank"
@@ -223,20 +223,20 @@ This makes it quick and easy to try out the system.
 
 Call `GotmDebug.add_lobby` to host a lobby without joining it.
 
-```
+```gdscript
 var lobby = GotmDebug.add_lobby()
 lobby.name = "My Test Lobby!"
 ```
 
 Lobbies are hidden from fetch results by default. Make the lobby visible by setting its `hidden` property to `false`.
 
-```
+```gdscript
 lobby.hidden = false
 ```
 
 You can now fetch it as if it was a real lobby.
 
-```
+```gdscript
 var fetch = GotmLobbyFetch.new()
 var lobbies = yield(fetch.first(), "completed")
 ```
@@ -245,14 +245,14 @@ var lobbies = yield(fetch.first(), "completed")
 
 You can attach your own metadata to a lobby as custom properties with `GotmLobby.set_property`.
 
-```
+```gdscript
 lobby.set_property("difficulty", "easy")
 lobby.set_property("map", "classic")
 ```
 
 You can now fetch the lobby and see its custom properties by calling `GotmLobby.get_property`.
 
-```
+```gdscript
 var difficulty = lobby.get_property("difficulty")
 var map = lobby.get_property("classic")
 ```
@@ -261,7 +261,7 @@ var map = lobby.get_property("classic")
 
 To only fetch lobbies with a particular difficulty or map, you can make them filterable by calling `GotmLobby.set_filterable`.
 
-```
+```gdscript
 lobby.set_filterable("difficulty")
 lobby.set_filterable("map")
 ```
@@ -269,14 +269,14 @@ lobby.set_filterable("map")
 Now you can filter lobbies with `GotmLobbyFetch.filter_properties`.
 For example, fetch lobbies with difficulty `easy` and map `classic` with the following code:
 
-```
+```gdscript
 fetch.filter_properties.difficulty = "easy"
 fetch.filter_properties.map = "classic"
 ```
 
 To fetch lobbies with any difficulty you can set its value to `null`.
 
-```
+```gdscript
 fetch.filter_properties.difficulty = null
 fetch.filter_properties.map = "classic"
 ```
@@ -284,7 +284,7 @@ fetch.filter_properties.map = "classic"
 When using `GotmLobbyFetch.filter_properties` you must set every value that was registered with `GotmLobby.set_filterable`.
 For example, the following will fail to fetch our lobby because it does not set `map` to any value.
 
-```
+```gdscript
 fetch.filter_properties.difficulty = null
 ```
 
@@ -292,7 +292,7 @@ Always make sure you are setting all properties.
 
 Disable filtering by setting all filter properties to `null`.
 
-```
+```gdscript
 fetch.filter_properties.difficulty = null
 fetch.filter_properties.map = null
 ```
@@ -303,27 +303,27 @@ By default lobbies are sorted by their creation time in descending order, so new
 
 Make your lobby sortable by difficulty with `GotmLobby.set_sortable`.
 
-```
+```gdscript
 lobby.set_sortable("difficulty")
 ```
 
 Now you can sort lobbies by setting `GotmLobbyFetch.sort_property`.
 For example, the following sort lobbies by difficulty with the following code:
 
-```
+```gdscript
 fetch.sort_property = "difficulty"
 ```
 
 When using `GotmLobbyFetch.sort_property` only lobbies that have registered that property with `GotmLobby.set_sortable` will be fetched.
 For example, the following will fail to fetch our lobby because `map` is not registered as sortable.
 
-```
+```gdscript
 fetch.sort_property = "map"
 ```
 
 Disable sorting by setting it to `""`.
 
-```
+```gdscript
 fetch.sort_property = ""
 ```
 
@@ -331,14 +331,14 @@ fetch.sort_property = ""
 
 You can search lobbies by name with `GotmLobbyFetch.filter_name`.
 
-```
+```gdscript
 fetch.filter_name = "My Test Lobby!"
 ```
 
 This searches for all lobbies whose names contains `My Test Lobby!`.
 Since the search is tolerant, these example values would successfully fetch our lobby too:
 
-```
+```gdscript
 fetch.filter_name = "my test lobby"
 fetch.filter_name = "tEsT"
 fetch.filter_name = "MY!!!     "
@@ -346,7 +346,7 @@ fetch.filter_name = "MY!!!     "
 
 Disable name-searching by setting it to `""`.
 
-```
+```gdscript
 fetch.filter_name = ""
 ```
 
@@ -354,7 +354,7 @@ fetch.filter_name = ""
 
 You can fetch lobbies page-by-page by using `GotmLobbyFetch.next`.
 
-```
+```gdscript
 var lobbies
 
 ### Get the next 5 lobbies...
@@ -368,13 +368,13 @@ lobbies = yield(fetch.next(5), "completed")
 
 You can refresh your current page with `GotmLobbyFetch.current`.
 
-```
+```gdscript
 lobbies = yield(fetch.current(5), "completed")
 ```
 
 Modifying any property in `GotmLobbyFetch` will reset its state to the first page.
 
-```
+```gdscript
 ### Page 1
 lobbies = yield(fetch.first(5), "completed")
 

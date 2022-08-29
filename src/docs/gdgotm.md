@@ -27,6 +27,8 @@ GDGotm supports Godot version 3.1.0 and newer.
 
 You must initialize GDGotm before you can use it in your game.
 
+###### Initialize Gotm
+
 ```gdscript
 Gotm.initialize()
 ```
@@ -55,6 +57,8 @@ If a player is temporarily disconnected from the internet, GDGotm will try to co
 
 You can enable global mode by providing a project key when initializing GDGotm. You can create a project key in your [game's dashboard](/dashboard/_/_?page=tools&highlight=project-key).
 
+###### Initialize Gotm with project key
+
 ```gdscript
 var config = GotmConfig.new()
 # Replace the empty string with your project key.
@@ -81,6 +85,8 @@ If you want a feature to remain in local mode, you can disable global mode for t
 # Enable detailed logs
 
 When you need to debug or troubleshoot issues related to GDGotm, you can enable verbose logs to be printed in Godot's console.
+
+###### Initialize Gotm with logs
 
 ```gdscript
 var config = GotmConfig.new()
