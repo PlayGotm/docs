@@ -1,0 +1,1 @@
+BETA NOTICE: Currently %subject%s are currently beta features and are stored locally unless the game is running on Gotm, even if you have provided a project key. Using beta features is safe when [GDGotm](/src/docs/gdgotm.md).
