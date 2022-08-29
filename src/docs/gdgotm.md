@@ -1,6 +1,6 @@
 # GDGotm
 
-Game developers can use GDGotm to implement many features for their Godot game using GDScript.
+Game developers can use GDGotm and GDScript to implement many features for their Godot game.
 
 GDGotm is a free and [open-source](https://github.com/PlayGotm/GDGotm) Godot plugin, and it doesn't require a Gotm account when in [local mode](#local-mode-for-offline-or-single-player-games).
 
