@@ -87,3 +87,11 @@ var config = GotmConfig.new()
 config.enable_logs = true
 Gotm.initialize(config)
 ```
+
+# Issues
+
+You can find help via the [contacts page](/contacts). If you encounter any bugs, please create an issue in [GDGotm's repository](https://github.com/PlayGotm/GDGotm).
+
+# Contribute
+
+Everyone is welcome to improve GDGotm by contributing to its [source code](https://github.com/PlayGotm/GDGotm).
