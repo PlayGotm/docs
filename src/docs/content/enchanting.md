@@ -52,7 +52,7 @@ yield(GotmContent.update_by_key(inventory_key, "inventory"), "completed")
 
 A game developer can add new recipes without updating the game. This example shows how to add a recipe that lets a player enchant a sword with fire. When the recipe is created it will be immediately accessible to all players.
 
-1. Go to the [game's dashboard](/dashboard/_/_?page=tools).
+1. Go to the [game's dashboard](/dashboard/_/_?p=tools&highlight=contents).
 1. Navigate to the Content card.
 1. Click the Create button.
 1. Type `recipes/fire_damage` into the Key text field.
@@ -77,7 +77,7 @@ A game developer can add new recipes without updating the game. This example sho
 
 A game developer can update existing recipes without updating the game. This example shows how to change the fire damage recipe to give 20 fire damage instead of 10. When the recipe is updated it will be immediately updated for all players.
 
-1. Go to the [game's dashboard](/dashboard/_/_?page=tools).
+1. Go to the [game's dashboard](/dashboard/_/_?p=tools&highlight=contents).
 1. Navigate to the Content card.
 1. Type `recipes/fire_damage` into the Key text field.
 1. Click the Get button.
@@ -101,7 +101,7 @@ A game developer can update existing recipes without updating the game. This exa
 
 A game developer can delete existing recipes without updating the game. This example shows how to delete the fire damage recipe. When the recipe is deleted it will immediately no longer be accessible to any player.
 
-1. Go to the [game's dashboard](/dashboard/_/_?page=tools).
+1. Go to the [game's dashboard](/dashboard/_/_?p=tools&highlight=contents).
 1. Navigate to the Content card.
 1. Type `recipes/fire_damage` into the Key text field.
 1. Click the Get button.

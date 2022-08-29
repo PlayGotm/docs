@@ -298,7 +298,7 @@ top_leaderboard.user_id = "<A_USER_ID>"
 
 # Manage scores in the dashboard
 
-You can easily browse, delete and edit scores in the tools section of [your game's dashboard](/dashboard/_/_?page=tools).
+You can easily browse, delete and edit scores in the tools section of [your game's dashboard](/dashboard/_/_?p=tools&highlight=leaderboards).
 
 # Reference
 

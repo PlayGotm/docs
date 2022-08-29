@@ -62,7 +62,7 @@ var sword = sword_contents[0].properties
 
 A game developer can add new items to the shop without updating the game. This example shows how to add a sword. When the sword is added it will be immediately accessible to all players.
 
-1. Go to the [game's dashboard](/dashboard/_/_?page=tools).
+1. Go to the [game's dashboard](/dashboard/_/_?p=tools&highlight=contents).
 1. Navigate to the Content card.
 1. Click the Create button.
 1. Type `Sword` into the Name text field to make it searchable by name.
@@ -81,7 +81,7 @@ A game developer can add new items to the shop without updating the game. This e
 
 A game developer can delete existing recipes without updating the game. This example shows how to delete the iron axe recipe. When the recipe is deleted it will immediately no longer be accessible to any player.
 
-1. Go to the [game's dashboard](/dashboard/_/_?page=tools).
+1. Go to the [game's dashboard](/dashboard/_/_?p=tools&highlight=contents).
 1. Navigate to the Content card.
 1. Type `Sword` into the Name text field.
 1. Click the Get button.
