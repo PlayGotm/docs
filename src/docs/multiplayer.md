@@ -5,24 +5,12 @@ Players connect through a unique invitation link that is generated when a player
 
 Try it out!
 
-<Game src="game-examples/networkedmultiplayerenet" />
+<game>[](/game-examples/networkedmultiplayerenet)</game>
 
 _Press "Host" to generate an invitation link. Join the game by entering the link in a new browser window and pressing "Join"._
 
-<HorizontalList>
-  <ExternalLink href="https://github.com/PlayGotm/Game-Examples/releases/latest/download/NetworkedMultiplayerENet.zip">
-    <OutlinedButton padding="10px" margin="10px">
-      <FiDownload size="24px" />
-      <span>Download project</span>
-    </OutlinedButton>
-  </ExternalLink>
-  <ExternalLink href="https://github.com/PlayGotm/Game-Examples/tree/master/NetworkedMultiplayerENet">
-    <OutlinedButton padding="10px" margin="10px">
-      <FiCode size="24px" />
-      <span>Browse source</span>
-    </OutlinedButton>
-  </ExternalLink>
-</HorizontalList>
+[<button outlined icon="download">Download Project</button>](https://github.com/PlayGotm/Game-Examples/releases/latest/download/NetworkedMultiplayerENet.zip)
+[<button outlined icon="code">Browse source</button>](https://github.com/PlayGotm/Game-Examples/tree/master/NetworkedMultiplayerENet)
 
 The above game example uses NetworkedMultiplayerENet to connect players in a shared drawing session.
 See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/NetworkedMultiplayerENet) for more details.
