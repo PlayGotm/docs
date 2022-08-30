@@ -72,13 +72,17 @@ Include garlic bread!
 
 When explaining a something game-related it can be useful to show a demo as an example. Games hosted on Gotm can be embedded into Markdown.
 
-In this example, we embed the game hosted at https://gotm.io/studio-handle/game-handle.
+In this example, we embed the game hosted at https://gotm.io/game-examples/lobbies.
 
 ###### Embed a game in Markdown
 
 ```markdown
-<game>[](/studio-handle/game-handle)</game>
+<game>[](/game-examples/lobbies)</game>
 ```
+
+The result looks like this:
+
+<game>[](/game-examples/lobbies)</game>
 
 # Button style
 
