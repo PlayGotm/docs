@@ -14,7 +14,7 @@ The documentation is structured as a flat collection of articles. An article is 
 
 For example, the "game" article explains what a game on Gotm is. The article's chapters then explain how to create a game, how to embed it on other websites, how to configure a game page, and so on. Since the "game" article is about the game concept, its source file is located at [`/src/docs/game.md`](https://github.com/PlayGotm/docs/blob/main/src/docs/game.md?plain=1), and the resulting article on Gotm is located at [`https://gotm.io/docs/game`](https://gotm.io/docs/game). Since the "create a game" chapter belongs to the "game" article, its source file is located at [`/src/docs/game/create-a-game.md`](https://github.com/PlayGotm/docs/blob/main/src/docs/game/create-a-game.md?plain=1), and the resulting chapter on Gotm is located at [`https://gotm.io/docs/game/create-a-game`](https://gotm.io/docs/game/create-a-game).
 
-The source files are written in [Markdown](https://gotm.io/docs/markdown). You can preview Markdown while editing a source file on GitHub, in a [Markdown online editor](https://marked.js.org/demo/?version=master), or via your preferred text editor. Please keep in mind that [Gotm renders the Markdown differently](https://gotm.io/docs/markdown) from the previewers.
+The source files are written in [Markdown](https://gotm.io/docs/markdown). You can preview Markdown with [Gotm's markdown editor](https://gotm.io/editor/markdown). Please keep in mind that [Gotm renders the Markdown differently](https://gotm.io/docs/markdown) from other previewers.
 
 ## Adding a new article or chapter to the side menu
 
