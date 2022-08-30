@@ -11,7 +11,7 @@ Let your players compete against eachother or themselves by adding high scores a
 [<button outlined icon="download">Download Project</button>](https://github.com/PlayGotm/Game-Examples/releases/latest/download/Leaderboards.zip)
 [<button outlined icon="code">Browse source</button>](https://github.com/PlayGotm/Game-Examples/tree/master/Leaderboards)
 
-The above game example uses [GDGotm](/src/docs/gdgotm.md) to create scores and list them with leaderboads. See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/Leaderboards) for more details.
+The above game example uses [GDGotm](/src/docs/gdgotm.md) to create scores and list them with leaderboards. See the [source code](https://github.com/PlayGotm/Game-Examples/tree/master/Leaderboards) for more details.
 
 <include>
 
