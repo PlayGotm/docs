@@ -79,3 +79,60 @@ In this example, we embed the game hosted at https://gotm.io/studio-handle/game-
 ```markdown
 <game>[](/studio-handle/game-handle)</game>
 ```
+
+# Button style
+
+When buttons are created in Markdown, they get a special style on Gotm.
+
+###### Make a button
+
+```markdown
+<button>My Button!</button>
+```
+
+The result looks like this:
+
+<button>My Button!</button>
+
+## Button attributes
+
+The button supports some special attributes:
+
+- `outlined`: Add an outline to the button.
+- `icon`: Add an icon to the button. See [Supported button icons](#supported-button-icons).
+
+The example below shows how to make an outlined button with a "home" icon.
+
+###### Make an outlined home button
+
+```markdown
+<button outlined icon="home">Home</button>
+```
+
+The result looks like this:
+
+<button outlined icon="home">Home</button>
+
+###### Supported button icons
+
+| Name        | How it looks                         | Code                                   |
+| ----------- | ------------------------------------ | -------------------------------------- |
+| home        | <button icon="home"></button>        | `<button icon="home"></button>`        |
+| content     | <button icon="content"></button>     | `<button icon="content"></button>`     |
+| leaderboard | <button icon="leaderboard"></button> | `<button icon="leaderboard"></button>` |
+| lobby       | <button icon="lobby"></button>       | `<button icon="lobby"></button>`       |
+| gdgotm      | <button icon="gdgotm"></button>      | `<button icon="gdgotm"></button>`      |
+| file        | <button icon="file"></button>        | `<button icon="file"></button>`        |
+| multiplayer | <button icon="multiplayer"></button> | `<button icon="multiplayer"></button>` |
+| sparkles    | <button icon="sparkles"></button>    | `<button icon="sparkles"></button>`    |
+| auction     | <button icon="auction"></button>     | `<button icon="auction"></button>`     |
+| hammer      | <button icon="hammer"></button>      | `<button icon="hammer"></button>`      |
+| trees       | <button icon="trees"></button>       | `<button icon="trees"></button>`       |
+| user        | <button icon="user"></button>        | `<button icon="user"></button>`        |
+| package     | <button icon="package"></button>     | `<button icon="package"></button>`     |
+| shop        | <button icon="shop"></button>        | `<button icon="shop"></button>`        |
+| scale       | <button icon="scale"></button>       | `<button icon="scale"></button>`       |
+| handshake   | <button icon="handshake"></button>   | `<button icon="handshake"></button>`   |
+| star        | <button icon="star"></button>        | `<button icon="star"></button>`        |
+| reference   | <button icon="reference"></button>   | `<button icon="reference"></button>`   |
+| offline     | <button icon="offline"></button>     | `<button icon="offline"></button>`     |
