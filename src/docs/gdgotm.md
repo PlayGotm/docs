@@ -82,7 +82,7 @@ When you enable [global mode](#global-mode-for-online-or-multi-player-games), al
 
 If you want a feature to remain in local mode, you can disable global mode for that particular feature. You can learn more by clicking the links in the [feature table's](#gdgotm-features) offline games support column.
 
-# Enable detailed logs
+<!-- # Enable detailed logs
 
 When you need to debug or troubleshoot issues related to GDGotm, you can enable verbose logs to be printed in Godot's console.
 
@@ -92,7 +92,7 @@ When you need to debug or troubleshoot issues related to GDGotm, you can enable 
 var config = GotmConfig.new()
 config.enable_logs = true
 Gotm.initialize(config)
-```
+``` -->
 
 # Issues
 
