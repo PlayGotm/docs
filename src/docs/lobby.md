@@ -34,7 +34,7 @@ To test it across networks, use the [web player](/web-player).
 
 # Host lobby
 
-Call [Gotm.host_lobby](/docs/api-reference#gotm-host-lobby) to host a lobby.
+Call `Gotm.host_lobby` to host a lobby.
 
 ###### Suppress invitation link popup
 
@@ -43,7 +43,7 @@ Call [Gotm.host_lobby](/docs/api-reference#gotm-host-lobby) to host a lobby.
 Gotm.host_lobby(false)
 ```
 
-You can now change its name and other properties by accessing it at [Gotm.lobby](/docs/api-reference#gotm-lobby).
+You can now change its name and other properties by accessing it at `Gotm.lobby`.
 
 ###### Set lobby name
 
@@ -51,7 +51,7 @@ You can now change its name and other properties by accessing it at [Gotm.lobby]
 Gotm.lobby.name = "My Lobby!"
 ```
 
-Lobbies are hidden from fetch results by default. Make your lobby visible by setting its [hidden](/docs/api-reference#gotmlobby-hidden) property to `false`.
+Lobbies are hidden from fetch results by default. Make your lobby visible by setting its `hidden` property to `false`.
 
 ###### Make lobby visible to other players
 
@@ -71,7 +71,7 @@ peer.create_server(8070)
 
 # Fetch lobbies
 
-Before you can join the lobby you must fetch it by calling [GotmLobbyFetch.first](/docs/api-reference#gotmlobbyfetch-first).
+Before you can join the lobby you must fetch it by calling `GotmLobbyFetch.first`.
 This call is asynchronous, which means that you must use [yield](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html?#coroutines-with-yield) to retrieve its return value.
 
 ###### Get lobbies with GotmLobbyFetch
@@ -81,11 +81,11 @@ var fetch = GotmLobbyFetch.new()
 var lobbies = yield(fetch.first(), "completed")
 ```
 
-If your lobby is not fetched, make sure you set its [hidden](/docs/api-reference#gotmlobby-hidden) property to `false` in the previous step.
+If your lobby is not fetched, make sure you set its `hidden` property to `false` in the previous step.
 
 # Join lobby
 
-Using the lobbies fetched in the previous step, you can join the lobby using [GotmLobby.join](/docs/api-reference#gotmlobby-join).
+Using the lobbies fetched in the previous step, you can join the lobby using `GotmLobby.join`.
 This call is asynchronous, which means that you must use [yield](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html?#coroutines-with-yield) to retrieve its return value.
 
 ###### Join a lobby
@@ -96,7 +96,7 @@ var success = yield(lobby.join(), "completed")
 ```
 
 You have now joined the lobby and are able to communicate with other peers in it.
-If your game uses networked multiplayer, you are now ready to connect to the [GotmUser.address](/docs/api-reference#gotmuser-address) of [GotmLobby.host](/docs/api-reference#gotmlobby-host).
+If your game uses networked multiplayer, you are now ready to connect to the `GotmUser.address` of `GotmLobby.host`.
 Here is an example using NetworkedMultiplayerENet.
 
 ###### Create client
