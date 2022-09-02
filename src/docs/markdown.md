@@ -4,6 +4,8 @@ When a game developer or player wants to add a description to their game or thei
 
 In addition to the [standard Markdown syntax](https://commonmark.org/help/), Gotm also supports some custom behavior.
 
+You can preview Markdown with [Gotm's markdown editor](/editor/markdown).
+
 # Include another Markdown file
 
 When your Markdown file starts to become big or when you want to reuse Markdown snippets in multiple places, it's useful to split the Markdown into multiple files. The separate files can then be included into a Markdown file.
