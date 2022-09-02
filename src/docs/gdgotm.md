@@ -53,7 +53,7 @@ Features that do not support global mode but supports local mode will continue t
 
 You can still [create local data](#create-local-data-in-global-mode) in global mode.
 
-If a player is temporarily disconnected from the internet, GDGotm will try to continue working by using cached data.
+<!-- If a player is temporarily disconnected from the internet, GDGotm will try to continue working by using cached data. -->
 
 You can enable global mode by providing a project key when initializing GDGotm. You can create a project key in your [game's dashboard](/dashboard/_/_?p=tools&highlight=project-key).
 
