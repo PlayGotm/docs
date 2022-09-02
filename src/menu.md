@@ -29,7 +29,7 @@ So if there is only one article "My Article", which has only one chapter "My Cha
   - [<button icon="offline"></button>](/src/docs/content/mix-local-and-global-contents.md)
   - [<button icon="reference">API reference</button>](/src/docs/gdgotm/api-reference/gotmcontent.md)
 - [<button icon="leaderboard"></button>](/src/docs/leaderboard.md)
-  - [<button icon="offline"></button>](/src/docs/leaderboard/mix-local-and-global-contents.md)
+  - [<button icon="offline"></button>](/src/docs/leaderboard/mix-local-and-global-scores.md)
   - [<button icon="reference">API reference</button>](/src/docs/gdgotm/api-reference/gotmleaderboard.md)
 - [<button icon="lobby"></button>](/src/docs/lobby.md)
   - [<button icon="reference">API reference</button>](/src/docs/gdgotm/api-reference/gotmlobby.md)
