@@ -51,7 +51,7 @@ When a player wants to look at the cheapest items in a shop, they can sort the s
 ###### Get items by price
 
 ```gdscript
-var query = Query.new()
+var query = GotmQuery.new()
 query.sort("properties/price", true)
 var sword_contents = yield(GotmContent.list(query), "completed")
 # Is {"name": "sword", "price": 50}
@@ -94,7 +94,7 @@ When a player wants to look up an item in a big shop with many items, they can e
 ###### Search items
 
 ```gdscript
-var query = Query.new()
+var query = GotmQuery.new()
 query.filter("name_part", "swo")
 var sword_contents = yield(GotmContent.list(query), "completed")
 # Is {"name": "sword", "price": 50}

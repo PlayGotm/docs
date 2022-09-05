@@ -21,7 +21,7 @@ When a player wants to look up an item in the %medium%, they can easily find it 
 ###### Search items for sale
 
 ```gdscript
-var query = Query.new()
+var query = GotmQuery.new()
 query.filter("name_part", "ge")
 var gem_sale_contents = yield(GotmContent.list(query), "completed")
 # Is {"name": "gem", "price": 50}

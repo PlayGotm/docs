@@ -106,7 +106,7 @@ A player can explore all possible recipes by listing all contents in the "recipe
 
 ```gdscript
 # Get all contents whose keys start with "recipes/", sorted by name.
-var query = Query.new()
+var query = GotmQuery.new()
 query.filter("directory", "recipes")
 query.sort("name", true)
 var first_20_recipes = yield(GotmContent.list(query), "completed")
@@ -123,7 +123,7 @@ When a player wants to know what they can do with a certain ingredient they have
 ###### List recipes by ingredient
 
 ```gdscript
-var query = Query.new()
+var query = GotmQuery.new()
 query.filter("properties/wood", true)
 var first_20_recipes = yield(GotmContent.list(query), "completed")
 # Is {"wood": true, "iron": true}
@@ -139,7 +139,7 @@ When a player wants to look up a recipe, they can easily find it by searching fo
 ###### Search recipes
 
 ```gdscript
-var query = Query.new()
+var query = GotmQuery.new()
 query.filter("name_part", "iro")
 var recipes = yield(GotmContent.list(query), "completed")
 # Is {"wood": true, "iron": true}
