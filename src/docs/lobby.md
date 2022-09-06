@@ -39,7 +39,7 @@ Call `Gotm.host_lobby` to host a lobby.
 ###### Suppress invitation link popup
 
 ```gdscript
-### Suppress invitation popup with 'false'.
+# Suppress invitation popup with 'false'.
 Gotm.host_lobby(false)
 ```
 
@@ -137,13 +137,13 @@ See the [example project](/game-examples/lobbies-fetch) for a live lobby browser
 var fetch = GotmLobbyFetch.new()
 var lobbies
 
-### Get the next 5 lobbies...
+# Get the next 5 lobbies...
 lobbies = yield(fetch.next(5), "completed")
 
-### And the next...
+# And the next...
 lobbies = yield(fetch.next(5), "completed")
 
-### And so on...
+# And so on...
 ```
 
 ## Quick-join
@@ -389,13 +389,13 @@ You can fetch lobbies page-by-page by using `GotmLobbyFetch.next`.
 ```gdscript
 var lobbies
 
-### Get the next 5 lobbies...
+# Get the next 5 lobbies...
 lobbies = yield(fetch.next(5), "completed")
 
-### And the next...
+# And the next...
 lobbies = yield(fetch.next(5), "completed")
 
-### And so on...
+# And so on...
 ```
 
 You can refresh your current page with `GotmLobbyFetch.current`.
@@ -411,16 +411,16 @@ Modifying any property in `GotmLobbyFetch` will reset its state to the first pag
 ###### Reset fetch state
 
 ```gdscript
-### Page 1
+# Page 1
 lobbies = yield(fetch.first(5), "completed")
 
-### Page 2
+# Page 2
 lobbies = yield(fetch.next(5), "completed")
 
-### Modify state
+# Modify state
 fetch.name = "abc"
 
-### Page 1
+# Page 1
 lobbies = yield(fetch.next(5), "completed")
 ```
 
