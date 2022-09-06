@@ -45,7 +45,7 @@ When a player wants to buy a gem through the marketplace, they can list all gem 
 
 When buying the gem, the buyer cannot send their coins directly to the seller because they are not allowed to modify another player's inventory for security reasons.
 
-Instead, the buyer stores the receipt of the purchase in a new content as a child to the gem sale. When the seller sees the receipt, they add the coins to their own inventory and remove the gem sale. Because the buyer created the receipt as a child to the gem sale, the receipt is automatically removed when the gem sale is removed.
+Instead, the buyer stores the receipt of the purchase in a new content as a child to the gem sale. When the seller sees the receipt, they add the coins to their own inventory and removes the gem sale. Because the buyer created the receipt as a child to the gem sale, the receipt is automatically removed when the gem sale is removed.
 
 ###### Buy gem and create receipt
 
