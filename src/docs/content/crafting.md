@@ -57,7 +57,7 @@ A game developer can add new recipes without updating the game. This example sho
 }
 ```
 
-5. Click the Save button.
+7. Click the Save button.
 
 # Change a recipe without updating the game
 
