@@ -30,7 +30,6 @@ See the [source code](https://github.com/PlayGotm/gdgotm-examples/tree/master/Lo
 </include>
 
 You do not need to run your game on Gotm to test lobbies on your local network.
-To test it across networks, use the [web player](/web-player).
 
 # Host lobby
 
