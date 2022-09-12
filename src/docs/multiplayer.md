@@ -9,11 +9,10 @@ Try it out!
 
 _Press "Host" to generate an invitation link. Join the game by entering the link in a new browser window and pressing "Join"._
 
-[<button outlined icon="download">Download Project</button>](https://github.com/PlayGotm/gdgotm-examples/releases/latest/download/NetworkedMultiplayerENet.zip)
-[<button outlined icon="code">Browse source</button>](https://github.com/PlayGotm/gdgotm-examples/tree/master/NetworkedMultiplayerENet)
+[<button outlined>Download demo project</button>](https://github.com/PlayGotm/gdgotm-examples/archive/refs/heads/master.zip)
+[<button outlined>Browse demo source code</button>](https://github.com/PlayGotm/gdgotm-examples)
 
-The above game example uses NetworkedMultiplayerENet to connect players in a shared drawing session.
-See the [source code](https://github.com/PlayGotm/gdgotm-examples/tree/master/NetworkedMultiplayerENet) for more details.
+The above game example uses [NetworkedMultiplayerENet](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html) to connect players in a shared drawing session.
 
 <include>
 
@@ -23,7 +22,7 @@ See the [source code](https://github.com/PlayGotm/gdgotm-examples/tree/master/Ne
 
 # Get started
 
-You can quickly get started by downloading the [example project](https://github.com/PlayGotm/gdgotm-examples/releases/latest/download/NetworkedMultiplayerENet.zip).
+You can quickly get started by downloading the [example project](https://github.com/PlayGotm/gdgotm-examples/archive/refs/heads/master.zip).
 The [web player](/web-player) is recommended for testing your game on Gotm without having to sign in.
 
 # Generate invitation link

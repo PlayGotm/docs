@@ -17,11 +17,10 @@ Try it out!
 
 _Host a lobby in one screen and refresh the list in the other screen. Click "Join" on the listed lobby to join it._
 
-[<button outlined icon="download">Download Project</button>](https://github.com/PlayGotm/gdgotm-examples/releases/latest/download/Lobbies.-.Host.and.join.zip)
-[<button outlined icon="code">Browse source</button>](https://github.com/PlayGotm/gdgotm-examples/tree/master/Lobbies%20-%20Host%20and%20join)
+[<button outlined>Download demo project</button>](https://github.com/PlayGotm/gdgotm-examples/archive/refs/heads/master.zip)
+[<button outlined>Browse demo source code</button>](https://github.com/PlayGotm/gdgotm-examples)
 
 The above game example uses GDGotm and [NetworkedMultiplayerENet](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html) to connect players in a shared drawing session.
-See the [source code](https://github.com/PlayGotm/gdgotm-examples/tree/master/Lobbies%20-%20Host%20and%20join) for more details.
 
 <include>
 
@@ -114,13 +113,12 @@ Try it out!
 
 _You can filter and sort your lobbies any way you want with custom properties._
 
-[<button outlined icon="download">Download Project</button>](https://github.com/PlayGotm/gdgotm-examples/releases/latest/download/Lobbies.-.Fetch.zip)
-[<button outlined icon="code">Browse source</button>](https://github.com/PlayGotm/gdgotm-examples/tree/master/Lobbies%20-%20Fetch)
+[<button outlined>Download demo project</button>](https://github.com/PlayGotm/gdgotm-examples/archive/refs/heads/master.zip)
+[<button outlined>Browse demo source code</button>](https://github.com/PlayGotm/gdgotm-examples)
 
 The above game example uses the [GDGotm](/src/docs/gdgotm.md) to fetch existing lobbies with custom properties.
 It fetches lobbies depending on its map, difficulty and name.
 It also sorts the results depending on the lobby's creation time or difficulty.
-See the [source code](https://github.com/PlayGotm/gdgotm-examples/tree/master/Lobbies%20-%20Fetch) for more details.
 
 GDGotm provides you with the basic building blocks of a lobby system, which gives you much freedom in your own design of your game's lobby experience.
 
