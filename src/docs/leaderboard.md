@@ -1,6 +1,6 @@
 # Leaderboard
 
-<include subject="leaderboard">
+<include subject="score">
 
 [](/src/utility/gdgotm-beta-notice.md)
 
