@@ -155,12 +155,12 @@ With quick-joining you could present your players with a simple "Play" button th
 
 ```gdscript
 func quick_join():
-  var fetch = GotmLobbyFetch.new()
-  fetch.sort_property = "player_count"
-  fetch.sort_ascending = false
+    var fetch = GotmLobbyFetch.new()
+    fetch.sort_property = "player_count"
+    fetch.sort_ascending = false
 
-  var lobbies = yield(fetch.first(1), "completed")
-  var success = yield(lobbies[0].join(), "completed")
+    var lobbies = yield(fetch.first(1), "completed")
+    var success = yield(lobbies[0].join(), "completed")
 ```
 
 ## Global lobbies
@@ -174,16 +174,16 @@ You then present your players with a button for each mode. When pressed, join th
 
 ```gdscript
 func join_global_lobby(mode):
-  var fetch = GotmLobbyFetch.new()
-  fetch.filter_properties.mode = mode
+    var fetch = GotmLobbyFetch.new()
+    fetch.filter_properties.mode = mode
 
-  var lobbies = yield(fetch.first(1), "completed")
-  if not lobbies.empty():
-    var success = yield(lobbies[0].join(), "completed")
-  else:
-    Gotm.host_lobby()
-    Gotm.lobby.mode = mode
-    Gotm.lobby.hidden = false
+    var lobbies = yield(fetch.first(1), "completed")
+    if not lobbies.empty():
+        var success = yield(lobbies[0].join(), "completed")
+    else:
+        Gotm.host_lobby()
+        Gotm.lobby.mode = mode
+        Gotm.lobby.hidden = false
 ```
 
 ## Matchmaking
@@ -196,19 +196,19 @@ Keep widening the range until a match is found.
 
 ```gdscript
 func do_matchmaking(rank):
-  var fetch = GotmLobbyFetch.new()
-  fetch.sort_property = "rank"
-  fetch.sort_min = rank
-  fetch.sort_max = rank
+    var fetch = GotmLobbyFetch.new()
+    fetch.sort_property = "rank"
+    fetch.sort_min = rank
+    fetch.sort_max = rank
 
-  while true:
-    var lobbies = yield(fetch.first(1), "completed")
-    if not lobbies.empty():
-      var success = yield(lobbies[0].join(), "completed")
-      return
-    else:
-      fetch.sort_min -= 1
-      fetch.sort_max += 1
+    while true:
+        var lobbies = yield(fetch.first(1), "completed")
+        if not lobbies.empty():
+            var success = yield(lobbies[0].join(), "completed")
+            return
+        else:
+            fetch.sort_min -= 1
+            fetch.sort_max += 1
 ```
 
 ## Create test lobby
