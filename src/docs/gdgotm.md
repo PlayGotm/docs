@@ -15,7 +15,7 @@ GDGotm contains the following features:
 | [Leaderboard](/src/docs/leaderboard.md) | High scores, ranks, leagues, seasons, score distribution graphs. |  Yes | [Yes](/src/docs/leaderboard/mix-local-and-global-scores.md) | Yes | 
 | [Lobby](/src/docs/lobby.md) | [Matchmaking](lobby/matchmaking.md), discover players and establish peer-to-peer connections. | LAN only | | Yes |
 
-GDGotm supports Godot version 3.1.0 and newer.
+GDGotm supports Godot version 3.2.0 and newer.
 
 # Install
 
