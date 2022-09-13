@@ -17,6 +17,7 @@ So if there is only one article "My Article", which has only one chapter "My Cha
   - [<button icon="reference">API reference</button>](/src/docs/gdgotm/api-reference.md)
 - [<button icon="content"></button>](/src/docs/content.md)
   - [<button icon="auction"></button>](/src/docs/content/auction-house.md)
+  - [<button icon="save"></button>](/src/docs/content/game-saves.md)
   - [<button icon="hammer"></button>](/src/docs/content/crafting.md)
   - [<button icon="user"></button>](/src/docs/content/custom-characters.md)
   - [<button icon="star"></button>](/src/docs/content/custom-items.md)
