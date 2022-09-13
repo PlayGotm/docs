@@ -42,7 +42,6 @@ Everyone is welcome to come up with their own ideas for how a game developer can
 |         | Game configuration and balancing        | Use content to configure a game and balance it by tweaking attributes of enemies, items or abilities.                 |
 |         | Custom abilities                        | Use content to let players create dynamic abilities. Oblivion could be used as an example game                        |
 |         | Skill trees                             | Use content to define skill trees and to save a player's progression in the tree.                                     |
-|         | Game saves                              | Use content to store a player's game saves.                                                                           |
 |         | Items                                   | Use content to add/edit/delete items of a game.                                                                       |
 |         | Maps                                    | Use content to add/edit/delete maps of a game.                                                                        |
 |         | Mods                                    | Use content to let players create mods and share them with other players.                                             |
