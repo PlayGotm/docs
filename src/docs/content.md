@@ -6,7 +6,7 @@
 
 </include>
 
-A content is a global and persistent piece of data in a game that can be shared between. The data can be an image, a player-generated item, a game configuration file, or anything else.
+A content is a global and persistent piece of data in a game that can be shared between players or devices. The data can be an image, a player-generated item, a game configuration file, or anything else.
 
 Players use content to share their progress or creations in a game with other players or between devices.
 
