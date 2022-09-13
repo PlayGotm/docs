@@ -83,6 +83,8 @@ The table below lists documentation that is intended to be created by Gotm staff
 
 Writing good documentation that the reader can easily understand, search and navigate is hard. Here are some tips that may help you write good documentation.
 
+If you are looking for a good text editor, VSCode has [very good support for Markdown](https://code.visualstudio.com/docs/languages/markdown), with autocomplete suggestions, autoformatting and previews.
+
 ## Guidelines
 
 The documentation in this repository follows a set of guidelines that should be followed.
@@ -90,6 +92,8 @@ The documentation in this repository follows a set of guidelines that should be 
 - Avoid acronyms unless absolutely necessary or if the term is only referred to by its acronym. For example, "role-playing game" should be used instead of "RPG" because not everyone knows what "RPG" means. On the other hand, using "HTML" is ok, because no one knows it as "HyperText Markup Language".
 - Use "and" instead of "&".
 - Capitalize words in a title as you would in a normal sentence. For example, capitalize your title like "How to make a Godot game" instead of "How to Make a Godot Game".
+- Prefer using local paths in links. For example, do `[link](/src/docs/content.md)` instead of `[link](https://gotm.io/docs/content)`. This way you get auto-complete suggestions and are able to ctrl-click to the local source file in some text editors.
+- In code comments, add a space after the `#` character. For example, do `# This is a comment` instead of `#This is a comment`. That makes the comment slightly more readable.
 
 ## The five Ws
 
