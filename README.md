@@ -94,6 +94,7 @@ The documentation in this repository follows a set of guidelines that should be 
 - Capitalize words in a title as you would in a normal sentence. For example, capitalize your title like "How to make a Godot game" instead of "How to Make a Godot Game".
 - Prefer using local paths in links. For example, do `[link](/src/docs/content.md)` instead of `[link](https://gotm.io/docs/content)`. This way you get auto-complete suggestions and are able to ctrl-click to the local source file in some text editors.
 - In code comments, add a space after the `#` character. For example, do `# This is a comment` instead of `#This is a comment`. That makes the comment slightly more readable.
+- Give all code snippets a "6-depth heading" that summarizes what is being done in the code. For example, add a `###### Save inventory` line above a code snippet which shows how to save an inventory.
 
 ## The five Ws
 
