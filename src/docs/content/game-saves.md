@@ -1,6 +1,6 @@
 
 # Game Saves
-Using [GotmContent](https://gotm.io/docs/content) we can easily create Game Saves for players, which is useful as players probably would not like to lose their data
+Using [GotmContent](https://gotm.io/docs/content) we can easily create Game Saves for players, which is useful as players probably would not like to lose their data.
 
 ## Save a game 
 
@@ -32,8 +32,8 @@ player.level = player_data["player_lvl"]
 ```
 
 ## Delete a game
-After players complete the game, they might want to delete the save file and beat the game again.
-So it would be great to let them delete a save file. here's how to do it:
+After players complete the game, they might want to delete the save file and beat the game again,
+so it would be great to let them delete a save file. here's how to do it:
 
 ```gdscript
 #Set player_data to an empty dictionary
