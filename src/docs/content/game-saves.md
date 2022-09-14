@@ -4,7 +4,7 @@ Using [GotmContent](/src/docs/content.md) we can easily create Game Saves for pl
 
 ## Save a game
 
-We could do this by creating a Dictionary which stores all information and saving this dictionary to [GotmContent](/src/docs/content/game-saves.md).
+We could do this by creating a Dictionary which stores all information and saving this dictionary to [GotmContent](/src/docs/content.md).
 
 ###### Save player data
 
