@@ -14,12 +14,6 @@ _Press "Host" to generate an invitation link. Join the game by entering the link
 
 The above game example uses [NetworkedMultiplayerENet](https://docs.godotengine.org/en/stable/classes/class_networkedmultiplayerenet.html) to connect players in a shared drawing session.
 
-<include>
-
-[](/src/utility/gdgotm-notice.md)
-
-</include>
-
 # Get started
 
 You can quickly get started by downloading the [example project](https://github.com/PlayGotm/gdgotm-examples/archive/refs/heads/master.zip).
