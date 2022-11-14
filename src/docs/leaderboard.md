@@ -293,21 +293,21 @@ top_leaderboard.user_id = "<A_USER_ID>"
 
 # Display Scores
 
-One way to display the scores in your game is to build a string to display the list with the rank of each score, the user's name or "Guest" if the user is not registered, and the value of the score.  You can then display this string inside of a label.
+One way to display the scores in your game is to build a string to display the list with the rank of each score, the user's name or "Guest" if the user is not registered, and the value of the score. You can then display this string inside of a label.
 
 ```gdscript
 var strLeaderboard = ""
 
 var top_scores = yield(top_leaderboard.get_scores(), "completed")
-	for score in top_scores:
-		var rank = yield(top_leaderboard.get_rank(score), "completed")
-		strLeaderboard += (str(rank) + ": ")
-		var user : GotmUser = yield(GotmUser.fetch(score.user_id), "completed")
-		if user:
-			strLeaderboard += (user.display_name + ("    "))
-		else:
-			strLeaderboard += "Guest    "
-		strLeaderboard += (str(score.value)+"\n")
+for score in top_scores:
+	var rank = yield(top_leaderboard.get_rank(score), "completed")
+	strLeaderboard += (str(rank) + ": ")
+	var user : GotmUser = yield(GotmUser.fetch(score.user_id), "completed")
+	if user:
+		strLeaderboard += (user.display_name + ("    "))
+	else:
+		strLeaderboard += "Guest    "
+	strLeaderboard += (str(score.value) + "\n")
 ```
 
 # Manage scores in the dashboard
