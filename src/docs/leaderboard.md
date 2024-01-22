@@ -1,11 +1,5 @@
 # Leaderboard
 
-<include subject="score">
-
-[](/src/utility/gdgotm-beta-notice.md)
-
-</include>
-
 Let your players compete against eachother or themselves by adding high scores and leaderboards to your game!
 
 <include>

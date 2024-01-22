@@ -79,12 +79,12 @@ In this example, we embed the game hosted at https://gotm.io/gdgotm-examples/lob
 ###### Embed a game in Markdown
 
 ```markdown
-<game>[](/gdgotm-examples/lobbies)</game>
+<game>[](/gdgotm-examples/lobby)</game>
 ```
 
 The result looks like this:
 
-<game>[](/gdgotm-examples/lobbies)</game>
+<game>[](/gdgotm-examples/lobby)</game>
 
 # Button style
 

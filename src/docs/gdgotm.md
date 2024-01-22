@@ -1,6 +1,6 @@
 # GDGotm
 
-[<button outlined>Download</button>](https://github.com/PlayGotm/GDGotm/archive/refs/heads/master.zip)
+[<button outlined>Download</button>](https://github.com/PlayGotm/GDGotm/releases/latest/download/gdgotm.zip)
 
 Game developers can use GDGotm and GDScript to implement many features for their Godot game.
 
@@ -13,27 +13,18 @@ GDGotm contains the following features:
 <!-- prettier-ignore -->
 | Feature | What can it be used for? | Can it be used for games not hosted on Gotm? | Does it support offline or single-player games? | Does it support online or multi-player games? |
 | --- | --- | --- | --- | --- |
+| [Multiplayer](/src/docs/multiplayer.md) | Establish peer-to-peer connections without port-forwarding. | Yes | No | Yes |
+| [Lobby](/src/docs/lobby.md) | Discover multiplayer game sessions. | Yes | No | Yes |
+| [Leaderboard](/src/docs/leaderboard.md) | High scores, ranks, leagues, seasons, score distribution graphs. |  Yes | [Yes](/src/docs/leaderboard/mix-local-and-global-scores.md) | Yes |
 | [Content](/src/docs/content.md) | [Mods](content/mods.md), [marketplace](content/marketplace.md), [crafting](content/crafting.md), and [more](/src/docs/content.md). | Yes | [Yes](/src/docs/content/mix-local-and-global-contents.md) | Yes | Yes |
-| [Leaderboard](/src/docs/leaderboard.md) | High scores, ranks, leagues, seasons, score distribution graphs. |  Yes | [Yes](/src/docs/leaderboard/mix-local-and-global-scores.md) | Yes | 
-| [Lobby](/src/docs/lobby.md) | [Matchmaking](lobby/matchmaking.md), discover players and establish peer-to-peer connections. | LAN only | | Yes |
 
-GDGotm supports Godot version 3.2.0 and newer.
+GDGotm supports Godot version 4.1 and newer.
 
 # Install
 
-1. [Download the plugin](https://github.com/PlayGotm/GDGotm/archive/refs/heads/master.zip) and extract the contents into your Godot project. You can also download the plugin via [Godot's asset library](https://docs.godotengine.org/en/stable/tutorials/assetlib/using_assetlib.html#in-the-editor) by searching for `GDGotm`.
-
-1. Add the `gotm/Gotm.gd` file to your project's [autoloads](https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html#autoload). Make sure the autoload is named `Gotm`. It must be named `Gotm` for it to work.
+[Download the plugin](https://github.com/PlayGotm/GDGotm/releases/latest/download/gdgotm.zip) and extract it into your Godot project's addons folder.
 
 # Initialize
-
-You must initialize GDGotm before you can use it in your game.
-
-###### Initialize Gotm
-
-```gdscript
-Gotm.initialize()
-```
 
 GDGotm is in [local mode](#local-mode-for-offline-or-single-player-games) by default. To enable online mode, see [Global mode for online or multi-player games](#global-mode-for-online-or-multi-player-games).
 
@@ -57,16 +48,16 @@ You can still [create local data](#create-local-data-in-global-mode) in global m
 
 <!-- If a player is temporarily disconnected from the internet, GDGotm will try to continue working by using cached data. -->
 
-You can enable global mode by providing a project key when initializing GDGotm. You can create a project key in your [game's dashboard](/dashboard/_/_?p=tools&highlight=project-key).
+You can enable global mode by providing a project key to the plugin. You can create a project key in your [game's dashboard](/dashboard/_/_?p=tools&highlight=project-key).
 
 ###### Initialize Gotm with project key
 
 ```gdscript
-var config = GotmConfig.new()
 # Replace the empty string with your project key.
-config.project_key = ""
-Gotm.initialize(config)
+Gotm.project_key = ""
 ```
+
+Make sure you set the project key before you call any of the plugin's functions.
 
 # Create local data in global mode
 
