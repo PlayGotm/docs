@@ -25,7 +25,7 @@ The above game example uses `GotmMultiplayer` to connect players in a shared dra
 ```gdscript
 var peer: WebRTCMultiplayerPeer = await GotmMultiplayer.create_server()
 multiplayer.multiplayer_peer = peer
-peer.peer_connected.connect(func(id): print("peer connected!"))
+multiplayer.peer_connected.connect(func(id): print("peer connected!"))
 # Players can join using this address.
 var address: String = await GotmMultiplayer.get_address()
 ```
