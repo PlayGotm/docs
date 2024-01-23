@@ -42,10 +42,10 @@ The [example above](#multiplayer) solved it by creating a link that players can 
 # The client needs to get this from the host somehow.
 var address: String = ""
 var peer: WebRTCMultiplayerPeer = await GotmMultiplayer.create_client(address)
-peer.multiplayer_peer = peer
-peer.connected_to_server.connect(func(): print("connected!"))
-peer.connection_failed.connect(func(): print("connection failed"))
+multiplayer.multiplayer_peer = peer
+multiplayer.connected_to_server.connect(func(): print("connected!"))
+multiplayer.connection_failed.connect(func(): print("connection failed"))
 
-await peer.connected_to_server
+await multiplayer.connected_to_server
 peer.put_var("hello world!")
 ```
