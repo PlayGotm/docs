@@ -40,7 +40,7 @@ The lobby contains your virtual IP address, which is used by other players to co
 ```gdscript
 var lobbies: Array = await GotmLobby.list()
 if !lobbies:
-    print("no lobbies found)
+    print("no lobbies found")
     return
 var address: String = lobbies[0].address
 ```
